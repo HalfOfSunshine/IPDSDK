@@ -7,12 +7,13 @@
 //
 
 #import "IPDAppDelegate.h"
-
+#import "IPDAppDelegate+IPDSDKRegiester.h"
 @implementation IPDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self regiestIPDSDK];
     return YES;
 }
 

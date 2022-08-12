@@ -8,14 +8,14 @@
 
 #import "IPDAppDelegate.h"
 #import <IPDSDK/IPDSDK.h>
-
+#import <objc/message.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface IPDAppDelegate (IPDSDKRegiester)
 @property (nonatomic, strong) IPDSplashAd *splashAd;
 @property (nonatomic, strong) UIView *bottomView;
 @property (nonatomic, strong) UIWindow *showWindow;
--(void)
+-(void)regiestIPDSDK;
 @end
 
 NS_ASSUME_NONNULL_END

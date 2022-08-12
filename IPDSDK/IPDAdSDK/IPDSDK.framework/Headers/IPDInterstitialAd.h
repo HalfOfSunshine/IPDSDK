@@ -1,0 +1,45 @@
+//
+//  IPDInterstitialAd.h
+//  IPDSDK
+//
+//  Created by IpdCoder on 2022/8/1.
+//  Copyright © 2022 ipd. All rights reserved.
+//
+
+#import "IPDAd.h"
+#import <IPDSDKCore/IPDInterstitialAdProtocol.h>
+
+NS_ASSUME_NONNULL_BEGIN
+@class IPDInterstitialAd;
+@protocol IPDInterstitialAdDelegate <NSObject>
+@optional
+///插屏广告加载成功
+- (void)ipd_interstitialAdDidLoad:(IPDInterstitialAd*)ad;
+
+///插屏广告加载失败
+- (void)ipd_interstitialAdDidLoadFail:(IPDInterstitialAd*)ad error:(nullable NSError *)error;
+
+///插屏广告展示成功回调
+- (void)ipd_interstitialAdDidPresentScreen:(IPDInterstitialAd*)ad;
+
+///插屏广告点击回调
+- (void)ipd_interstitialAdDidClick:(IPDInterstitialAd*)ad;
+
+///插屏广告关闭回调
+- (void)ipd_interstitialAdDidClose:(IPDInterstitialAd*)ad;
+
+///插屏广告详情页关闭回调
+- (void)ipd_interstitialAdDetailDidClose:(IPDInterstitialAd*)ad;
+
+///插屏广告其他错误回调
+- (void)ipd_interstitialAdDidFail:(IPDInterstitialAd*)ad error:(nullable NSError *)error;
+
+@end
+
+@interface IPDInterstitialAd : IPDAd<IPDInterstitialAdProtocol>
+
+@property(nonatomic,weak) id<IPDInterstitialAdDelegate>delegate;
+
+@end
+
+NS_ASSUME_NONNULL_END

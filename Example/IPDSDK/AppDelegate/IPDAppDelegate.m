@@ -8,12 +8,26 @@
 
 #import "IPDAppDelegate.h"
 #import "IPDAppDelegate+IPDSDKRegiester.h"
+#import "IPDMainViewController.h"
 @implementation IPDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [self regiestIPDSDK];
+    // adaptor for Customer Event
+    [self setupIPDSDK];
+    [self showSplashAd];
+    
+    if (self.window == nil) {
+        IPDMainViewController *mainViewController = [[IPDMainViewController alloc] init];
+        UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+        
+        UIWindow *keyWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        [keyWindow makeKeyAndVisible];
+        self.window = keyWindow;
+        self.window.rootViewController = navigationVC;
+    }
+    // initialize AD SDK
     return YES;
 }
 

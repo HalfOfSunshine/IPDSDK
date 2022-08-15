@@ -17,9 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view addSubview:self.splashBgImageView];
-    self.view.backgroundColor = [UIColor redColor];
-    
+    [self.view addSubview:self.splashBgImageView];    
 }
 
 

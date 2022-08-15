@@ -9,7 +9,6 @@
 #import "IPDAppDelegate+IPDSDKRegiester.h"
 #import <AppTrackingTransparency/AppTrackingTransparency.h>
 #import "View+MASAdditions.h"
-#import "IPDSplashContainerVC.h"
 @implementation IPDAppDelegate (IPDSDKRegiester)
 //ipd_20201014iOSDEMO
 
@@ -136,17 +135,4 @@
     objc_setAssociatedObject(self, @selector(bottomView), bottomView,OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (UIWindow *)showWindow{
-    UIWindow *_showWindow = objc_getAssociatedObject(self, @selector(showWindow));
-    if (!_showWindow) {
-        _showWindow = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-        _showWindow.windowLevel = UIWindowLevelAlert +10000;
-        _showWindow.backgroundColor = [UIColor clearColor];
-        _showWindow.rootViewController = [[IPDSplashContainerVC alloc]init];
-    }
-    return _showWindow;
-}
-- (void)setShowWindow:(UIWindow *)showWindow{
-    objc_setAssociatedObject(self, @selector(showWindow), showWindow,OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
 @end

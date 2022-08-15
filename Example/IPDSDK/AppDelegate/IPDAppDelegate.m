@@ -9,6 +9,7 @@
 #import "IPDAppDelegate.h"
 #import "IPDAppDelegate+IPDSDKRegiester.h"
 #import "IPDMainViewController.h"
+#import "IPDSplashContainerVC.h"
 @implementation IPDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -21,13 +22,11 @@
     if (self.window == nil) {
         IPDMainViewController *mainViewController = [[IPDMainViewController alloc] init];
         UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:mainViewController];
-        
         UIWindow *keyWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         [keyWindow makeKeyAndVisible];
         self.window = keyWindow;
         self.window.rootViewController = navigationVC;
     }
-    // initialize AD SDK
     return YES;
 }
 
@@ -56,6 +55,17 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark =============== LazyLoad ===============
+-(UIWindow*) showWindow{
+    if(!_showWindow){
+        _showWindow = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+        _showWindow.windowLevel = UIWindowLevelAlert +10000;
+        _showWindow.backgroundColor = [UIColor clearColor];
+        _showWindow.rootViewController = [[IPDSplashContainerVC alloc]init];
+    }
+    return _showWindow;
 }
 
 @end

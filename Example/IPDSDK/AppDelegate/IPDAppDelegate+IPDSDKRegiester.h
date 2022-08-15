@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface IPDAppDelegate (IPDSDKRegiester)<IPDSplashAdDelegate>
 @property (nonatomic, strong) IPDSplashAd *splashAd;
 @property (nonatomic, strong) UIView *bottomView;
-@property (nonatomic, strong) UIWindow *showWindow;
 -(void)setupIPDSDK;
 -(void)showSplashAd;
 @end

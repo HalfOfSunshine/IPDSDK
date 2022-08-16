@@ -13,22 +13,6 @@
 #ifdef __OBJC__
     @import UIKit;
     @import Foundation;
-
-#define kMainColor [UIColor colorWithRed:33/255.0 green:152/255.0 blue:217/255.0 alpha:1.0f];
-
-#define kIsIphoneX \
-({BOOL isPhoneX = NO;\
-if (@available(iOS 11.0, *)) {\
-isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
-}\
-(isPhoneX);})
-
-#define kNavigationBarHeight (kIsIphoneX ? 88 : 64)
-
-#define kScreenWidth [UIScreen mainScreen].bounds.size.width
-
-#define kScreenHeight [UIScreen mainScreen].bounds.size.height
-
-/*底部安全区域高度*/
-#define kSafeBottomMargin (kIsIphoneX ? 34.0 : 0)
+#import "UIColor+IPDRGB.h"
+#import "IPDCommonHeader.h"
 #endif

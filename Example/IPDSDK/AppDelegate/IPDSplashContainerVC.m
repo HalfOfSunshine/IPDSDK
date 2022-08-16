@@ -24,7 +24,7 @@
 
 -(UIImageView *)splashBgImageView{
     if (!_splashBgImageView) {
-        _splashBgImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+        _splashBgImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_W, SCREEN_H)];
         _splashBgImageView.image = [UIImage imageNamed:@"SplashBgX"];
         
     }

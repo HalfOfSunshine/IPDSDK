@@ -7,19 +7,154 @@
 //
 
 #import "IPDMainViewController.h"
-
-@interface IPDMainViewController ()
-
+#import "IPDMainCell.h"
+#import <IPDSDK/IPDSDK.h>
+@interface IPDMainViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, strong) UITableView *table;
+@property (nonatomic, strong) NSArray *adTypesArray;
 @end
 
 @implementation IPDMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor orangeColor];
+    [self setNavBar];
+
+    self.title = @"IPDAdSDK Demo";
+
+    [self.view addSubview:self.table];
 }
 
+#pragma mark =============== UISet ===============
+-(void)setNavBar{
+    self.navigationController.navigationBarHidden = NO;
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorFromHexRGB:@"B22222"]];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+
+    if (@available(iOS 15.0, *)) {
+        UINavigationBarAppearance *appperance = [[UINavigationBarAppearance alloc]init];
+        appperance.backgroundColor = MainColor;
+        appperance.shadowImage = [[UIImage alloc]init];
+        appperance.shadowColor = nil;
+        [appperance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+        self.navigationController.navigationBar.standardAppearance = appperance;
+        self.navigationController.navigationBar.scrollEdgeAppearance = appperance;
+    }
+}
+
+#pragma mark =============== createTable ===============
+- (UITableView *)table{
+    if (!_table) {
+        _table = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_W, SCREEN_H-TopBar_H) style:UITableViewStyleGrouped];
+        _table.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        if (@available(iOS 11.0, *)) {
+            _table.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+            _table.estimatedRowHeight = 0;
+            _table.estimatedSectionHeaderHeight = 0;
+            _table.estimatedSectionFooterHeight = 0;
+        }
+        _table.backgroundColor = [UIColor clearColor];
+        _table.delegate = self;
+        _table.dataSource = self;
+        [_table registerNib:[UINib nibWithNibName:@"IPDMainCell" bundle:nil] forCellReuseIdentifier:@"IPDMainCell"];
+
+    }
+    
+    return _table;
+}
+
+#pragma mark =============== UITableViewDataSource ===============
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.adTypesArray.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    static NSString *reuseID = @"IPDMainCell";
+    IPDMainCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseID];
+    if(!cell) {
+        cell = [[NSBundle mainBundle]loadNibNamed:@"IPDMainCell" owner:nil options:nil].firstObject;
+        //        cell.selectionStyle = UITableViewCellSelectionStyleNone;//设置点击没有选中效果
+    }
+    cell.DescLab.text = self.adTypesArray[indexPath.row];
+    return cell;
+}
+
+#pragma mark =============== UITableViewDelegate ===============
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 55;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSLog(@"==%ld",(long)indexPath.row);
+}
+
+#pragma mark =============== LazyLoad ===============
+- (NSArray*)adTypesArray{
+    if(!_adTypesArray){
+        _adTypesArray = @[@"激励视频",
+                          @"开屏广告",
+                          @"插屏广告",
+                          @"全屏视频",
+                          @"Banner广告",
+                          @"视频流",
+                          @"视频内容",
+                          @"信息流广告",
+                          @"自渲染",
+                          @"H5页面",
+                          @"悬浮广告",
+                          @"JS交互"];
+    }
+    return _adTypesArray;;
+}
+
+#pragma mark-======footer
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 100;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView * footBagView = [UIView new];
+    footBagView.frame = CGRectMake(0, 0, SCREEN_W, 100);
+    footBagView.backgroundColor = [UIColor clearColor];
+    UILabel * footlabel =[[UILabel alloc]initWithFrame:CGRectMake(0, 0, SCREEN_W, 100)];
+    footlabel.text = [NSString stringWithFormat:@"v%@",[IPDAdSDK SDKVersion]];
+    footlabel.textAlignment = NSTextAlignmentCenter;
+    footlabel.textColor = [UIColor colorFromHexRGB:@"0x909399"];
+    [footBagView addSubview:footlabel];
+    return footBagView;
+}
+
+
+ #pragma mark-======header
+ - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+     return 0.1;
+ }
+ - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+     UIView * headBagView = [UIView new];
+     headBagView.frame = CGRectMake(0, 0, SCREEN_W, 0.1);
+     headBagView.backgroundColor = [UIColor lightGrayColor];
+     UILabel * headlabel =[[UILabel alloc]initWithFrame:CGRectMake(10, 0, SCREEN_W, 0.1)];
+     headlabel.text = @"头部";
+     [headBagView addSubview:headlabel];
+     return headBagView;
+ }
+ 
 /*
 #pragma mark - Navigation
 

@@ -4,7 +4,15 @@ platform :ios, '10.0'
 
 target 'IPDSDK_Example' do
   pod 'IPDSDK', :path => '../'
-
+#  pod 'ZJSDK/ZJSDKModuleDSP'
+#  pod 'ZJSDK/ZJSDKModuleGDT'#优量汇广告
+##  pod 'ZJSDK/ZJSDKModuleCSJ'#穿山甲广告
+#  pod 'ZJSDK/ZJSDKModuleKS'#快手广告
+#  pod 'ZJSDK/ZJSDKModuleMTG'#MTG广告
+#  pod 'ZJSDK/ZJSDKModuleSIG'#Sigmob广告
+#  pod 'ZJSDK/ZJSDKModuleBD'#百度广告
+#  pod 'ZJSDK/ZJSDKModuleYM'#云码广告
+#  pod 'ZJSDK/ZJSDKModuleGoogle'#Google广告
   target 'IPDSDK_Tests' do
     inherit! :search_paths
 

@@ -117,7 +117,7 @@
 - (UIView *)bottomView{
     UIView *_bottomView = objc_getAssociatedObject(self, @selector(bottomView));
     if (!_bottomView) {
-        _bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 100)];
+        _bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_W, 100)];
         _bottomView.backgroundColor = [UIColor whiteColor];
         
         UILabel *titleLabel = [[UILabel alloc]init];

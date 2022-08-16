@@ -21,6 +21,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		AB5CA25E28ABA7B900B44D3B /* IPDExpressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5CA25C28ABA7B900B44D3B /* IPDExpressCell.m */; };
+		AB5CA25F28ABA7B900B44D3B /* IPDExpressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB5CA25D28ABA7B900B44D3B /* IPDExpressCell.xib */; };
 		AB792B8028A6294C00716E35 /* IPDAppDelegate+IPDSDKRegiester.m in Sources */ = {isa = PBXBuildFile; fileRef = AB792B7F28A6294C00716E35 /* IPDAppDelegate+IPDSDKRegiester.m */; };
 		AB792B8B28AA160E00716E35 /* IPDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB792B8928A9FA2600716E35 /* IPDMainViewController.m */; };
 		AB792BA628AA215100716E35 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AB792B8E28AA215000716E35 /* NSLayoutConstraint+MASDebugAdditions.m */; };
@@ -47,6 +49,11 @@
 		AB8E710028AB5AF200686A70 /* H5VC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8E70FF28AB5AF200686A70 /* H5VC.m */; };
 		AB8E710328AB5B0200686A70 /* FloatingAdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8E710228AB5B0200686A70 /* FloatingAdVC.m */; };
 		AB8E710628AB5B1E00686A70 /* JSBridgeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8E710528AB5B1E00686A70 /* JSBridgeVC.m */; };
+		AB8E710D28AB72D700686A70 /* ExpressAdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8E710C28AB72D700686A70 /* ExpressAdVC.m */; };
+		AB8E711028AB73C200686A70 /* VideoExpressAdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8E710F28AB73C200686A70 /* VideoExpressAdVC.m */; };
+		AB8E711328AB749D00686A70 /* NativeRenderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8E711228AB749D00686A70 /* NativeRenderVC.m */; };
+		AB8E711628AB7AFF00686A70 /* IPDAdBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8E711528AB7AFF00686A70 /* IPDAdBaseVC.m */; };
+		AB8E711A28AB7BE500686A70 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8E711928AB7BE500686A70 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		EE4268626A6506AC07DE6C1C /* Pods_IPDSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901A7334E1E12934FF4A6544 /* Pods_IPDSDK_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +93,9 @@
 		9208E04BDAFE8A4EEACD4A80 /* Pods-IPDSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPDSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-IPDSDK_Tests/Pods-IPDSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4CAF7E319868ECCDAD4063B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A6E76C888074B9C71C4E82DD /* Pods-IPDSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPDSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-IPDSDK_Example/Pods-IPDSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
+		AB5CA25B28ABA7B900B44D3B /* IPDExpressCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPDExpressCell.h; sourceTree = "<group>"; };
+		AB5CA25C28ABA7B900B44D3B /* IPDExpressCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPDExpressCell.m; sourceTree = "<group>"; };
+		AB5CA25D28ABA7B900B44D3B /* IPDExpressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IPDExpressCell.xib; sourceTree = "<group>"; };
 		AB792B7E28A6294C00716E35 /* IPDAppDelegate+IPDSDKRegiester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IPDAppDelegate+IPDSDKRegiester.h"; sourceTree = "<group>"; };
 		AB792B7F28A6294C00716E35 /* IPDAppDelegate+IPDSDKRegiester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "IPDAppDelegate+IPDSDKRegiester.m"; sourceTree = "<group>"; };
 		AB792B8828A9FA2600716E35 /* IPDMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPDMainViewController.h; sourceTree = "<group>"; };
@@ -143,6 +153,16 @@
 		AB8E710228AB5B0200686A70 /* FloatingAdVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloatingAdVC.m; sourceTree = "<group>"; };
 		AB8E710428AB5B1E00686A70 /* JSBridgeVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSBridgeVC.h; sourceTree = "<group>"; };
 		AB8E710528AB5B1E00686A70 /* JSBridgeVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSBridgeVC.m; sourceTree = "<group>"; };
+		AB8E710B28AB72D700686A70 /* ExpressAdVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpressAdVC.h; sourceTree = "<group>"; };
+		AB8E710C28AB72D700686A70 /* ExpressAdVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpressAdVC.m; sourceTree = "<group>"; };
+		AB8E710E28AB73C200686A70 /* VideoExpressAdVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoExpressAdVC.h; sourceTree = "<group>"; };
+		AB8E710F28AB73C200686A70 /* VideoExpressAdVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoExpressAdVC.m; sourceTree = "<group>"; };
+		AB8E711128AB749D00686A70 /* NativeRenderVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeRenderVC.h; sourceTree = "<group>"; };
+		AB8E711228AB749D00686A70 /* NativeRenderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NativeRenderVC.m; sourceTree = "<group>"; };
+		AB8E711428AB7AFE00686A70 /* IPDAdBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPDAdBaseVC.h; sourceTree = "<group>"; };
+		AB8E711528AB7AFF00686A70 /* IPDAdBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPDAdBaseVC.m; sourceTree = "<group>"; };
+		AB8E711828AB7BE500686A70 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		AB8E711928AB7BE500686A70 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		C0086890A038E9DF53546D69 /* Pods_IPDSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IPDSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA41559282BBC1AE5BD4BFE1 /* Pods-IPDSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPDSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-IPDSDK_Tests/Pods-IPDSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -350,6 +370,7 @@
 		AB8E70D528AB34C500686A70 /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
+				AB8E711B28AB7BFD00686A70 /* UINavigationController */,
 				AB8E70D628AB34D700686A70 /* UIColor */,
 			);
 			path = Categorys;
@@ -370,6 +391,9 @@
 				AB8E70E328AB3C2C00686A70 /* IPDMainCell.h */,
 				AB8E70E428AB3C2C00686A70 /* IPDMainCell.m */,
 				AB8E70E528AB3C2C00686A70 /* IPDMainCell.xib */,
+				AB5CA25B28ABA7B900B44D3B /* IPDExpressCell.h */,
+				AB5CA25C28ABA7B900B44D3B /* IPDExpressCell.m */,
+				AB5CA25D28ABA7B900B44D3B /* IPDExpressCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -377,6 +401,8 @@
 		AB8E70E828AB411A00686A70 /* AdsVC */ = {
 			isa = PBXGroup;
 			children = (
+				AB8E711428AB7AFE00686A70 /* IPDAdBaseVC.h */,
+				AB8E711528AB7AFF00686A70 /* IPDAdBaseVC.m */,
 				AB8E710728AB5B3C00686A70 /* NativeAd */,
 				AB8E70EC28AB5A5400686A70 /* InterstitialVC.h */,
 				AB8E70ED28AB5A5400686A70 /* InterstitialVC.m */,
@@ -388,8 +414,14 @@
 				AB8E70F628AB5A9300686A70 /* BannerVC.m */,
 				AB8E70F828AB5AB400686A70 /* ContentPageVC.h */,
 				AB8E70F928AB5AB400686A70 /* ContentPageVC.m */,
+				AB8E710B28AB72D700686A70 /* ExpressAdVC.h */,
+				AB8E710C28AB72D700686A70 /* ExpressAdVC.m */,
+				AB8E710E28AB73C200686A70 /* VideoExpressAdVC.h */,
+				AB8E710F28AB73C200686A70 /* VideoExpressAdVC.m */,
 				AB8E70FB28AB5ADB00686A70 /* SplashVC.h */,
 				AB8E70FC28AB5ADB00686A70 /* SplashVC.m */,
+				AB8E711128AB749D00686A70 /* NativeRenderVC.h */,
+				AB8E711228AB749D00686A70 /* NativeRenderVC.m */,
 				AB8E70FE28AB5AF200686A70 /* H5VC.h */,
 				AB8E70FF28AB5AF200686A70 /* H5VC.m */,
 				AB8E710128AB5B0200686A70 /* FloatingAdVC.h */,
@@ -403,8 +435,8 @@
 		AB8E70EA28AB457C00686A70 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				AB8E70D528AB34C500686A70 /* Categorys */,
 				AB8E70EB28AB45AE00686A70 /* IPDCommonHeader.h */,
+				AB8E70D528AB34C500686A70 /* Categorys */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -414,6 +446,15 @@
 			children = (
 			);
 			path = NativeAd;
+			sourceTree = "<group>";
+		};
+		AB8E711B28AB7BFD00686A70 /* UINavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				AB8E711828AB7BE500686A70 /* UINavigationController+FDFullscreenPopGesture.h */,
+				AB8E711928AB7BE500686A70 /* UINavigationController+FDFullscreenPopGesture.m */,
+			);
+			path = UINavigationController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -499,6 +540,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB5CA25F28ABA7B900B44D3B /* IPDExpressCell.xib in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				AB8E70E728AB3C2C00686A70 /* IPDMainCell.xib in Resources */,
@@ -636,25 +678,31 @@
 				AB792BAA28AA215100716E35 /* MASLayoutConstraint.m in Sources */,
 				AB792B8028A6294C00716E35 /* IPDAppDelegate+IPDSDKRegiester.m in Sources */,
 				AB792BB228AA225600716E35 /* IPDSplashContainerVC.m in Sources */,
+				AB5CA25E28ABA7B900B44D3B /* IPDExpressCell.m in Sources */,
 				AB8E70DC28AB3A8B00686A70 /* IPDBaseViewController.m in Sources */,
 				AB8E710328AB5B0200686A70 /* FloatingAdVC.m in Sources */,
 				AB8E70E628AB3C2C00686A70 /* IPDMainCell.m in Sources */,
 				AB8E70F128AB5A6B00686A70 /* RewardVC.m in Sources */,
 				AB792BAF28AA215100716E35 /* MASViewAttribute.m in Sources */,
+				AB8E711328AB749D00686A70 /* NativeRenderVC.m in Sources */,
 				AB8E710028AB5AF200686A70 /* H5VC.m in Sources */,
 				AB792BAB28AA215100716E35 /* NSArray+MASAdditions.m in Sources */,
 				AB792BA828AA215100716E35 /* MASCompositeConstraint.m in Sources */,
 				AB792BA928AA215100716E35 /* MASConstraintMaker.m in Sources */,
 				AB792BAC28AA215100716E35 /* View+MASAdditions.m in Sources */,
 				AB792BA728AA215100716E35 /* ViewController+MASAdditions.m in Sources */,
+				AB8E711A28AB7BE500686A70 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				AB8E70D928AB34D700686A70 /* UIColor+IPDRGB.m in Sources */,
+				AB8E710D28AB72D700686A70 /* ExpressAdVC.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				AB8E70F428AB5A8400686A70 /* FullScreenVideoVC.m in Sources */,
+				AB8E711028AB73C200686A70 /* VideoExpressAdVC.m in Sources */,
 				AB8E70FA28AB5AB400686A70 /* ContentPageVC.m in Sources */,
 				AB8E70EE28AB5A5400686A70 /* InterstitialVC.m in Sources */,
 				AB792BAE28AA215100716E35 /* MASViewConstraint.m in Sources */,
 				AB792BA628AA215100716E35 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				AB8E70F728AB5A9300686A70 /* BannerVC.m in Sources */,
+				AB8E711628AB7AFF00686A70 /* IPDAdBaseVC.m in Sources */,
 				AB8E710628AB5B1E00686A70 /* JSBridgeVC.m in Sources */,
 				AB792BAD28AA215100716E35 /* MASConstraint.m in Sources */,
 			);

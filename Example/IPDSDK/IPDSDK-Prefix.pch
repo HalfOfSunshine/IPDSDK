@@ -14,5 +14,6 @@
     @import UIKit;
     @import Foundation;
 #import "UIColor+IPDRGB.h"
+#import <IPDSDK/IPDSDK.h>
 #import "IPDCommonHeader.h"
 #endif

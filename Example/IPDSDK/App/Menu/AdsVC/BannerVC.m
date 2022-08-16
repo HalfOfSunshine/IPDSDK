@@ -8,7 +8,8 @@
 
 #import "BannerVC.h"
 
-@interface BannerVC ()
+@interface BannerVC ()<IPDBannerAdViewDelegate>
+@property(nonatomic,strong) IPDBannerAdView *bannerView;
 
 @end
 
@@ -19,14 +20,52 @@
     // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+//    @"1080958885885321",@"945778025",@"ipdad_iOS_ZB0001",@"J7564361179",@"J9474896977",@"J7722563364"
+    if (self.isFirstLoad) {
+        [self loadAd:@"1080958885885321"];
+        self.isFirstLoad = NO;
+    }
 }
-*/
+
+-(void) loadAd:(NSString*) adId{
+    self.bannerView = [[IPDBannerAdView alloc] initWithPlacementId:adId viewController:self adSize:CGSizeMake(SCREEN_W, 200)];
+    self.bannerView.frame = CGRectMake(0, SCREEN_H-TopBar_H-SafeAreaBottomHeight, SCREEN_W, 200);
+    self.bannerView.delegate = self;
+    [self.bannerView loadAdAndShow];
+    [self.view addSubview:self.bannerView];
+}
+
+#pragma mark IPDBannerAdViewDelegate
+// banner广告加载成功
+- (void)ipd_bannerAdViewDidLoad:(IPDBannerAdView *)bannerAdView{
+
+}
+
+// banner广告加载失败
+- (void)ipd_bannerAdView:(IPDBannerAdView *)bannerAdView didLoadFailWithError:(NSError *_Nullable)error{
+}
+
+
+// bannerAdView曝光回调
+- (void)ipd_bannerAdViewWillBecomVisible:(IPDBannerAdView *)bannerAdView{
+}
+
+// 关闭banner广告
+- (void)ipd_bannerAdViewDislike:(IPDBannerAdView *)bannerAdView{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+// 点击banner广告回调
+- (void)ipd_bannerAdViewDidClick:(IPDBannerAdView *)bannerAdView{
+    
+}
+
+// 关闭banner广告详情页
+- (void)ipd_bannerAdViewDidCloseOtherController:(IPDBannerAdView *)bannerAdView{
+    
+}
+
 
 @end

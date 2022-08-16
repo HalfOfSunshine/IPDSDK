@@ -1,35 +1,35 @@
 //
-//  JSBridgeVC.m
+//  IPDAdBaseVC.m
 //  IPDSDK_Example
 //
 //  Created by 麻明康 on 2022/8/16.
 //  Copyright © 2022 Mountain King. All rights reserved.
 //
 
-#import "JSBridgeVC.h"
+#import "IPDAdBaseVC.h"
 
-@interface JSBridgeVC ()
+@interface IPDAdBaseVC ()
 
 @end
 
-@implementation JSBridgeVC
+@implementation IPDAdBaseVC
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.isFirstLoad = YES;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-//    @"J8595471688",@"J9666281550"
-    if (self.isFirstLoad) {
-        [self loadAd:@"J8595471688"];
-        self.isFirstLoad = NO;
-    }
-}
-
--(void) loadAd:(NSString*) adId{
-
+- (void)dealloc{
+    NSLog(@"class %@ is deallocated",NSStringFromClass([self class]));
 }
 
 /*

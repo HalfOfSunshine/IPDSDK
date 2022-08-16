@@ -11,6 +11,7 @@
 #import <IPDSDK/IPDSDK.h>
 @interface IPDMainViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *table;
+@property (nonatomic, strong) NSDictionary *adTypesDic;
 @property (nonatomic, strong) NSArray *adTypesArray;
 @end
 
@@ -102,37 +103,28 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSLog(@"==%ld",(long)indexPath.row);
-}
-
-#pragma mark =============== LazyLoad ===============
-- (NSArray*)adTypesArray{
-    if(!_adTypesArray){
-        _adTypesArray = @[@"激励视频",
-                          @"开屏广告",
-                          @"插屏广告",
-                          @"全屏视频",
-                          @"Banner广告",
-                          @"视频流",
-                          @"视频内容",
-                          @"信息流广告",
-                          @"自渲染",
-                          @"H5页面",
-                          @"悬浮广告",
-                          @"JS交互"];
+    NSString *keyType = self.adTypesArray[indexPath.row];
+    
+    if ([self.adTypesDic.allKeys containsObject:keyType]) {
+        NSString *vcName = self.adTypesDic[keyType];
+        UIViewController *vc  = [[NSClassFromString(vcName) alloc] init];
+        vc.title = keyType;
+        [self.navigationController pushViewController:vc animated:YES];
+    }else{
+        NSAssert(NO, @"未找到该广告对应的VC，请检查字段");
     }
-    return _adTypesArray;;
 }
 
 #pragma mark-======footer
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 100;
+    return 50;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     UIView * footBagView = [UIView new];
-    footBagView.frame = CGRectMake(0, 0, SCREEN_W, 100);
+    footBagView.frame = CGRectMake(0, 0, SCREEN_W, 50);
     footBagView.backgroundColor = [UIColor clearColor];
-    UILabel * footlabel =[[UILabel alloc]initWithFrame:CGRectMake(0, 0, SCREEN_W, 100)];
+    UILabel * footlabel =[[UILabel alloc]initWithFrame:CGRectMake(0, 0, SCREEN_W, 50)];
     footlabel.text = [NSString stringWithFormat:@"v%@",[IPDAdSDK SDKVersion]];
     footlabel.textAlignment = NSTextAlignmentCenter;
     footlabel.textColor = [UIColor colorFromHexRGB:@"0x909399"];
@@ -155,6 +147,47 @@
      return headBagView;
  }
  
+#pragma mark =============== LazyLoad ===============
+- (NSDictionary*)adTypesDic{
+    if(!_adTypesDic){
+        _adTypesDic = @{@"激励视频":@"RewardVC",
+                        @"开屏广告":@"SplashVC",
+                        @"插屏广告":@"InterstitialVC",
+                        @"Banner广告":@"BannerVC",
+                        
+                        @"全屏视频":@"FullScreenVideoVC",
+                        @"视频内容":@"ContentPageVC",
+                        @"信息流":@"ExpressAdVC",
+                        @"视频流":@"VideoExpressAdVC",
+                        
+                        @"自渲染":@"NativeRenderVC",
+                        @"H5页面":@"H5VC",
+                        @"悬浮广告":@"FloatingAdVC",
+                        @"JS交互":@"JSBridgeVC"};
+    }
+    return _adTypesDic;;
+}
+
+- (NSArray*)adTypesArray{
+    if(!_adTypesArray){
+        _adTypesArray = @[@"激励视频",
+                          @"开屏广告",
+                          @"插屏广告",
+                          @"Banner广告",
+                          
+                          @"全屏视频",
+                          @"视频内容",
+                          @"信息流",
+                          @"视频流",
+                          
+                          @"自渲染",
+                          @"悬浮广告",
+                          @"H5页面",
+                          @"JS交互"];
+    }
+    return _adTypesArray;;
+}
+
 /*
 #pragma mark - Navigation
 

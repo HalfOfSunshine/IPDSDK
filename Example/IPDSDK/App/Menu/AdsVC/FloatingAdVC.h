@@ -6,11 +6,11 @@
 //  Copyright © 2022 Mountain King. All rights reserved.
 //
 
-#import "IPDBaseViewController.h"
+#import "IPDAdBaseVC.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FloatingAdVC : IPDBaseViewController
+@interface FloatingAdVC : IPDAdBaseVC
 
 @end
 

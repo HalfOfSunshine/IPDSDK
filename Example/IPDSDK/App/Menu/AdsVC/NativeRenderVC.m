@@ -1,18 +1,18 @@
 //
-//  JSBridgeVC.m
+//  NativeRenderVC.m
 //  IPDSDK_Example
 //
 //  Created by 麻明康 on 2022/8/16.
 //  Copyright © 2022 Mountain King. All rights reserved.
 //
 
-#import "JSBridgeVC.h"
+#import "NativeRenderVC.h"
 
-@interface JSBridgeVC ()
+@interface NativeRenderVC ()
 
 @end
 
-@implementation JSBridgeVC
+@implementation NativeRenderVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

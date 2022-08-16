@@ -1,18 +1,18 @@
 //
-//  JSBridgeVC.m
+//  VideoExpressAdVC.m
 //  IPDSDK_Example
 //
 //  Created by 麻明康 on 2022/8/16.
 //  Copyright © 2022 Mountain King. All rights reserved.
 //
 
-#import "JSBridgeVC.h"
+#import "VideoExpressAdVC.h"
 
-@interface JSBridgeVC ()
+@interface VideoExpressAdVC ()
 
 @end
 
-@implementation JSBridgeVC
+@implementation VideoExpressAdVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

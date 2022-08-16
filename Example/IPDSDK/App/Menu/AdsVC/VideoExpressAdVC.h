@@ -1,5 +1,5 @@
 //
-//  H5VC.h
+//  VideoExpressAdVC.h
 //  IPDSDK_Example
 //
 //  Created by 麻明康 on 2022/8/16.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface H5VC : IPDAdBaseVC
+@interface VideoExpressAdVC : IPDAdBaseVC
 
 @end
 

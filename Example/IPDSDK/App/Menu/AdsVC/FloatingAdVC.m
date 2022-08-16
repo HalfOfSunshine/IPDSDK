@@ -19,6 +19,19 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+//    @"J8595471688",@"J9666281550"
+    if (self.isFirstLoad) {
+        [self loadAd:@"J8595471688"];
+        self.isFirstLoad = NO;
+    }
+}
+
+-(void) loadAd:(NSString*) adId{
+
+}
+
 /*
 #pragma mark - Navigation
 

@@ -37,6 +37,8 @@
 		AB792BAE28AA215100716E35 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = AB792BA428AA215000716E35 /* MASViewConstraint.m */; };
 		AB792BAF28AA215100716E35 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = AB792BA528AA215000716E35 /* MASViewAttribute.m */; };
 		AB792BB228AA225600716E35 /* IPDSplashContainerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB792BB128AA225600716E35 /* IPDSplashContainerVC.m */; };
+		AB7DC23B28ACDA5900206988 /* IPDVideoExpressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7DC23A28ACDA5900206988 /* IPDVideoExpressCell.m */; };
+		AB7DC23E28ACDA7100206988 /* IPDVideoExpressAdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7DC23D28ACDA7100206988 /* IPDVideoExpressAdCell.m */; };
 		AB8E70D928AB34D700686A70 /* UIColor+IPDRGB.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8E70D728AB34D700686A70 /* UIColor+IPDRGB.m */; };
 		AB8E70DC28AB3A8B00686A70 /* IPDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8E70DB28AB3A8B00686A70 /* IPDBaseViewController.m */; };
 		AB8E70E628AB3C2C00686A70 /* IPDMainCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8E70E428AB3C2C00686A70 /* IPDMainCell.m */; };
@@ -130,6 +132,10 @@
 		AB792BA528AA215000716E35 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
 		AB792BB028AA225600716E35 /* IPDSplashContainerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPDSplashContainerVC.h; sourceTree = "<group>"; };
 		AB792BB128AA225600716E35 /* IPDSplashContainerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPDSplashContainerVC.m; sourceTree = "<group>"; };
+		AB7DC23928ACDA5900206988 /* IPDVideoExpressCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPDVideoExpressCell.h; sourceTree = "<group>"; };
+		AB7DC23A28ACDA5900206988 /* IPDVideoExpressCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPDVideoExpressCell.m; sourceTree = "<group>"; };
+		AB7DC23C28ACDA7100206988 /* IPDVideoExpressAdCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPDVideoExpressAdCell.h; sourceTree = "<group>"; };
+		AB7DC23D28ACDA7100206988 /* IPDVideoExpressAdCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPDVideoExpressAdCell.m; sourceTree = "<group>"; };
 		AB8E70D728AB34D700686A70 /* UIColor+IPDRGB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+IPDRGB.m"; sourceTree = "<group>"; };
 		AB8E70D828AB34D700686A70 /* UIColor+IPDRGB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+IPDRGB.h"; sourceTree = "<group>"; };
 		AB8E70DA28AB3A8A00686A70 /* IPDBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPDBaseViewController.h; sourceTree = "<group>"; };
@@ -399,6 +405,10 @@
 				AB5CA25D28ABA7B900B44D3B /* IPDExpressCell.xib */,
 				AB74231C28AC934C0097451E /* IPDExpressAdCell.h */,
 				AB74231D28AC934C0097451E /* IPDExpressAdCell.m */,
+				AB7DC23928ACDA5900206988 /* IPDVideoExpressCell.h */,
+				AB7DC23A28ACDA5900206988 /* IPDVideoExpressCell.m */,
+				AB7DC23C28ACDA7100206988 /* IPDVideoExpressAdCell.h */,
+				AB7DC23D28ACDA7100206988 /* IPDVideoExpressAdCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -687,8 +697,10 @@
 				AB8E70DC28AB3A8B00686A70 /* IPDBaseViewController.m in Sources */,
 				AB8E710328AB5B0200686A70 /* FloatingAdVC.m in Sources */,
 				AB8E70E628AB3C2C00686A70 /* IPDMainCell.m in Sources */,
+				AB7DC23B28ACDA5900206988 /* IPDVideoExpressCell.m in Sources */,
 				AB8E70F128AB5A6B00686A70 /* RewardVC.m in Sources */,
 				AB792BAF28AA215100716E35 /* MASViewAttribute.m in Sources */,
+				AB7DC23E28ACDA7100206988 /* IPDVideoExpressAdCell.m in Sources */,
 				AB8E711328AB749D00686A70 /* NativeRenderVC.m in Sources */,
 				AB8E710028AB5AF200686A70 /* H5VC.m in Sources */,
 				AB792BAB28AA215100716E35 /* NSArray+MASAdditions.m in Sources */,

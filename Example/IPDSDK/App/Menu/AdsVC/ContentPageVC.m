@@ -21,11 +21,18 @@
     self.contentPage.videoStateDelegate = self;
     self.contentPage.stateDelegate = self;
     UIViewController *vc = self.contentPage.viewController;
+    if (vc) {
+        CGFloat contentY = [UIApplication sharedApplication].statusBarFrame.size.height+self.navigationController.navigationBar.frame.size.height;
+        vc.view.frame = CGRectMake(0, contentY, self.view.frame.size.width, self.view.frame.size.height-contentY);
+        [self addChildViewController:vc];
+        [self.view addSubview:vc.view];
+    }else{
+        UILabel *remindLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 100, SCREEN_W, SCREEN_H-100)];
+        remindLab.text = @"     视频内容需要内容包支持，请下载sdk，单独手动导入快手模块.\n    其他模块正常导入即可，不影响";
+        remindLab.numberOfLines = 5;
+        [self.view addSubview:remindLab];
+    }
     
-    CGFloat contentY = [UIApplication sharedApplication].statusBarFrame.size.height+self.navigationController.navigationBar.frame.size.height;
-    vc.view.frame = CGRectMake(0, contentY, self.view.frame.size.width, self.view.frame.size.height-contentY);
-    [self addChildViewController:vc];
-    [self.view addSubview:vc.view];
 }
 
 #pragma mark IPDContentPageVideoStateDelegate

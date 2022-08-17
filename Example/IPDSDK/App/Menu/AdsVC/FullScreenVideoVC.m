@@ -56,7 +56,7 @@
 
 //广告关闭
 - (void)ipd_fullScreenVideoAdDidClose:(IPDFullScreenVideoAd *)ad{
-
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 //广告详情页关闭

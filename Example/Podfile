@@ -4,6 +4,7 @@ platform :ios, '10.0'
 
 target 'IPDSDK_Example' do
   pod 'IPDSDK', :path => '../'
+  
 #  pod 'ZJSDK/ZJSDKModuleDSP'
 #  pod 'ZJSDK/ZJSDKModuleGDT'#优量汇广告
 ##  pod 'ZJSDK/ZJSDKModuleCSJ'#穿山甲广告

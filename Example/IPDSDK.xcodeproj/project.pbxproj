@@ -23,6 +23,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		AB5CA25E28ABA7B900B44D3B /* IPDExpressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5CA25C28ABA7B900B44D3B /* IPDExpressCell.m */; };
 		AB5CA25F28ABA7B900B44D3B /* IPDExpressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB5CA25D28ABA7B900B44D3B /* IPDExpressCell.xib */; };
+		AB74231E28AC934C0097451E /* IPDExpressAdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB74231D28AC934C0097451E /* IPDExpressAdCell.m */; };
 		AB792B8028A6294C00716E35 /* IPDAppDelegate+IPDSDKRegiester.m in Sources */ = {isa = PBXBuildFile; fileRef = AB792B7F28A6294C00716E35 /* IPDAppDelegate+IPDSDKRegiester.m */; };
 		AB792B8B28AA160E00716E35 /* IPDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB792B8928A9FA2600716E35 /* IPDMainViewController.m */; };
 		AB792BA628AA215100716E35 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AB792B8E28AA215000716E35 /* NSLayoutConstraint+MASDebugAdditions.m */; };
@@ -96,6 +97,8 @@
 		AB5CA25B28ABA7B900B44D3B /* IPDExpressCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPDExpressCell.h; sourceTree = "<group>"; };
 		AB5CA25C28ABA7B900B44D3B /* IPDExpressCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPDExpressCell.m; sourceTree = "<group>"; };
 		AB5CA25D28ABA7B900B44D3B /* IPDExpressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IPDExpressCell.xib; sourceTree = "<group>"; };
+		AB74231C28AC934C0097451E /* IPDExpressAdCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPDExpressAdCell.h; sourceTree = "<group>"; };
+		AB74231D28AC934C0097451E /* IPDExpressAdCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPDExpressAdCell.m; sourceTree = "<group>"; };
 		AB792B7E28A6294C00716E35 /* IPDAppDelegate+IPDSDKRegiester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IPDAppDelegate+IPDSDKRegiester.h"; sourceTree = "<group>"; };
 		AB792B7F28A6294C00716E35 /* IPDAppDelegate+IPDSDKRegiester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "IPDAppDelegate+IPDSDKRegiester.m"; sourceTree = "<group>"; };
 		AB792B8828A9FA2600716E35 /* IPDMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPDMainViewController.h; sourceTree = "<group>"; };
@@ -394,6 +397,8 @@
 				AB5CA25B28ABA7B900B44D3B /* IPDExpressCell.h */,
 				AB5CA25C28ABA7B900B44D3B /* IPDExpressCell.m */,
 				AB5CA25D28ABA7B900B44D3B /* IPDExpressCell.xib */,
+				AB74231C28AC934C0097451E /* IPDExpressAdCell.h */,
+				AB74231D28AC934C0097451E /* IPDExpressAdCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -689,6 +694,7 @@
 				AB792BAB28AA215100716E35 /* NSArray+MASAdditions.m in Sources */,
 				AB792BA828AA215100716E35 /* MASCompositeConstraint.m in Sources */,
 				AB792BA928AA215100716E35 /* MASConstraintMaker.m in Sources */,
+				AB74231E28AC934C0097451E /* IPDExpressAdCell.m in Sources */,
 				AB792BAC28AA215100716E35 /* View+MASAdditions.m in Sources */,
 				AB792BA728AA215100716E35 /* ViewController+MASAdditions.m in Sources */,
 				AB8E711A28AB7BE500686A70 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,

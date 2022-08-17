@@ -8,7 +8,9 @@
 
 #import "VideoExpressAdVC.h"
 
-@interface VideoExpressAdVC ()
+@interface VideoExpressAdVC ()<UITableViewDataSource,UITableViewDelegate,IPDFeedFullVideoProviderDelegate>
+@property (strong, nonatomic) UITableView *table;
+@property (nonatomic, copy) NSArray *dataSource;
 
 @end
 

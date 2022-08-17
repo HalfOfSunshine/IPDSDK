@@ -8,8 +8,13 @@
 
 #import "ExpressAdVC.h"
 #import "IPDExpressCell.h"
-@interface ExpressAdVC ()<UITableViewDelegate,UITableViewDataSource>
+#import "IPDExpressAdCell.h"
+@interface ExpressAdVC ()<UITableViewDelegate,UITableViewDataSource,IPDNativeExpressFeedAdDelegate,IPDNativeExpressFeedAdManagerDelegate>
+
+@property (nonatomic,strong)IPDNativeExpressFeedAdManager *expressAdManager;
+
 @property (nonatomic, strong) UITableView *table;
+@property (nonatomic, strong) NSMutableArray *dataArray;
 @end
 
 @implementation ExpressAdVC
@@ -18,6 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.edgesForExtendedLayout = UIRectEdgeNone;
+    [self setRightBarBtn];
     [self.view addSubview:self.table];
 }
 
@@ -25,12 +31,32 @@
     [super viewWillAppear:animated];
 //    @"G3061112693227741",@"K4000000007",@"T945740162",@"zjad_iOS_ZF0001",@"K4000000008"
     if (self.isFirstLoad) {
-        [self loadAd:@"G3061112693227741"];
+        [self loadAd];
         self.isFirstLoad = NO;
     }
 }
 
--(void) loadAd:(NSString*) adId{
+-(void) loadAd{
+    if (!_expressAdManager) {
+        _expressAdManager = [[IPDNativeExpressFeedAdManager alloc] initWithPlacementId:@"G3061112693227741" size:CGSizeMake(self.table.frame.size.width, 0)];
+        _expressAdManager.delegate = self;
+        _expressAdManager.mutedIfCan = YES;
+    }
+    [_expressAdManager loadAdDataWithCount:3];
+}
+
+-(void)setRightBarBtn{
+    UIButton * regreshBtn = [[UIButton alloc]init];
+    if (@available(iOS 13.0, *)) {
+        [regreshBtn setImage:[UIImage systemImageNamed:@"arrow.clockwise"] forState:UIControlStateNormal];
+        [regreshBtn setImage:[UIImage systemImageNamed:@"arrow.clockwise"] forState:UIControlStateSelected];
+    } else {
+        [regreshBtn setTitle:@"刷新" forState:UIControlStateNormal];
+    }
+   [regreshBtn setFrame:CGRectMake(0, 0, 40, 44)];
+   [regreshBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 10, 0, 0)];
+    [regreshBtn addTarget:self action:@selector(loadAd) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:regreshBtn];
 
 }
 
@@ -62,26 +88,40 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 30;
+    return self.dataArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    static NSString *reuseID = @"IPDExpressCell";
-    
-    IPDExpressCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseID];
-    if(!cell) {
-        cell = [[NSBundle mainBundle]loadNibNamed:@"IPDExpressCell" owner:nil options:nil].firstObject;
+    id object =  self.dataArray[indexPath.row];
+    if ([object isKindOfClass:[IPDNativeExpressFeedAd class]]) {
+        IPDExpressAdCell *cell = [tableView dequeueReusableCellWithIdentifier:@"IPDExpressAdCell"];
+        if (!cell) {
+            cell = [[IPDExpressAdCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"IPDExpressAdCell"];
+        }
+        [cell refreshWithAd:object];
+        return cell;
+    }else{
+        static NSString *reuseID = @"IPDExpressCell";
+        
+        IPDExpressCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseID];
+        if(!cell) {
+            cell = [[NSBundle mainBundle]loadNibNamed:@"IPDExpressCell" owner:nil options:nil].firstObject;
+        }
+        cell.titleLabel.text = self.dataArray[indexPath.row];
+        return cell;
     }
-    cell.titleLabel.text = [NSString stringWithFormat:@"第%ld行的标题",indexPath.row];
-    return cell; 
+
 }
 
 #pragma mark =============== UITableViewDelegate ===============
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 98;
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    id object =  self.dataArray[indexPath.row];
+    if ([object isKindOfClass:[IPDNativeExpressFeedAd class]]) {
+        return ((IPDNativeExpressFeedAd *)object).feedView.frame.size.height;
+    }else{
+        return 98;
+    }
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -89,14 +129,81 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark =============== IPDNativeExpressFeedAdManagerDelegate ===============
+-(void)IPD_nativeExpressFeedAdManagerSuccessToLoad:(IPDNativeExpressFeedAdManager *)adsManager nativeAds:(NSArray<IPDNativeExpressFeedAd *> *)feedAdDataArray{
+    //不要保存太多广告，需要在合适的时机手动释放不用的，否则内存会过大
+    for (int i = 0; i<feedAdDataArray.count; i++) {
+        IPDNativeExpressFeedAd *feedAd = feedAdDataArray[i];
+        feedAd.rootViewController = self;
+        feedAd.delegate = self;
+        [feedAd render];
+        
+        NSInteger index = i*3;
+        if (index >= self.dataArray.count) {
+            [self.dataArray addObject:feedAd];
+        }else{
+            [self.dataArray insertObject:feedAd atIndex:index];
+        }
+    }
+    [self.table reloadData];
 }
-*/
+
+-(void)IPD_nativeExpressFeedAdManager:(IPDNativeExpressFeedAdManager *)adsManager didFailWithError:(NSError *)error{
+    NSLog(@"error:%@",error);
+}
+
+
+#pragma mark =============== IPDNativeExpressFeedAdDelegate ===============
+/**
+ * 广告渲染成功
+ */
+- (void)IPD_nativeExpressFeedAdRenderSuccess:(IPDNativeExpressFeedAd *)feedAd{
+    [self.table reloadData];
+}
+
+/**
+ * 广告渲染失败
+ */
+- (void)IPD_nativeExpressFeedAdRenderFail:(IPDNativeExpressFeedAd *)feedAd{
+    [self.dataArray removeObject:feedAd];
+    [self.table reloadData];
+}
+
+- (void)IPD_nativeExpressFeedAdViewWillShow:(IPDNativeExpressFeedAd *)feedAd{
+
+}
+
+- (void)IPD_nativeExpressFeedAdDidClick:(IPDNativeExpressFeedAd *)feedAd{
+    
+}
+
+- (void)IPD_nativeExpressFeedAdDislike:(IPDNativeExpressFeedAd *)feedAd{
+    [self.dataArray removeObject:feedAd];
+    [self.table reloadData];
+}
+
+- (void)IPD_nativeExpressFeedAdDidShowOtherController:(IPDNativeExpressFeedAd *)nativeAd{
+    
+}
+
+- (void)IPD_nativeExpressFeedAdDidCloseOtherController:(IPDNativeExpressFeedAd *)nativeAd{
+    
+}
+
+
+#pragma mark =============== LazyLoad ===============
+-(NSMutableArray *)dataArray{
+    if (!_dataArray) {
+        NSMutableArray *array = [NSMutableArray array];
+        for (int i = 0 ; i <= 15; i++) {
+            NSString *string = [NSString stringWithFormat:@"第%d行的标题",i];
+            [array addObject:string];
+        }
+        _dataArray = array;
+    }
+    return _dataArray;
+}
+
 
 @end

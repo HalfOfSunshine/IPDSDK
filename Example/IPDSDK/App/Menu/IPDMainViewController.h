@@ -6,7 +6,7 @@
 //  Copyright © 2022 Mountain King. All rights reserved.
 //
 
-#import "IPDBaseViewController.h""
+#import "IPDBaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

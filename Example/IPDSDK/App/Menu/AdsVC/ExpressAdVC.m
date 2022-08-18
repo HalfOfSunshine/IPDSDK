@@ -131,7 +131,7 @@
 
 
 #pragma mark =============== IPDNativeExpressFeedAdManagerDelegate ===============
--(void)IPD_nativeExpressFeedAdManagerSuccessToLoad:(IPDNativeExpressFeedAdManager *)adsManager nativeAds:(NSArray<IPDNativeExpressFeedAd *> *)feedAdDataArray{
+-(void)ipd_nativeExpressFeedAdManagerSuccessToLoad:(IPDNativeExpressFeedAdManager *)adsManager nativeAds:(NSArray<IPDNativeExpressFeedAd *> *)feedAdDataArray{
     //不要保存太多广告，需要在合适的时机手动释放不用的，否则内存会过大
     for (int i = 0; i<feedAdDataArray.count; i++) {
         IPDNativeExpressFeedAd *feedAd = feedAdDataArray[i];
@@ -149,7 +149,7 @@
     [self.table reloadData];
 }
 
--(void)IPD_nativeExpressFeedAdManager:(IPDNativeExpressFeedAdManager *)adsManager didFailWithError:(NSError *)error{
+-(void)ipd_nativeExpressFeedAdManager:(IPDNativeExpressFeedAdManager *)adsManager didFailWithError:(NSError *)error{
     NSLog(@"error:%@",error);
 }
 
@@ -158,36 +158,36 @@
 /**
  * 广告渲染成功
  */
-- (void)IPD_nativeExpressFeedAdRenderSuccess:(IPDNativeExpressFeedAd *)feedAd{
+- (void)ipd_nativeExpressFeedAdRenderSuccess:(IPDNativeExpressFeedAd *)feedAd{
     [self.table reloadData];
 }
 
 /**
  * 广告渲染失败
  */
-- (void)IPD_nativeExpressFeedAdRenderFail:(IPDNativeExpressFeedAd *)feedAd{
+- (void)ipd_nativeExpressFeedAdRenderFail:(IPDNativeExpressFeedAd *)feedAd{
     [self.dataArray removeObject:feedAd];
     [self.table reloadData];
 }
 
-- (void)IPD_nativeExpressFeedAdViewWillShow:(IPDNativeExpressFeedAd *)feedAd{
+- (void)ipd_nativeExpressFeedAdViewWillShow:(IPDNativeExpressFeedAd *)feedAd{
 
 }
 
-- (void)IPD_nativeExpressFeedAdDidClick:(IPDNativeExpressFeedAd *)feedAd{
+- (void)ipd_nativeExpressFeedAdDidClick:(IPDNativeExpressFeedAd *)feedAd{
     
 }
 
-- (void)IPD_nativeExpressFeedAdDislike:(IPDNativeExpressFeedAd *)feedAd{
+- (void)ipd_nativeExpressFeedAdDislike:(IPDNativeExpressFeedAd *)feedAd{
     [self.dataArray removeObject:feedAd];
     [self.table reloadData];
 }
 
-- (void)IPD_nativeExpressFeedAdDidShowOtherController:(IPDNativeExpressFeedAd *)nativeAd{
+- (void)ipd_nativeExpressFeedAdDidShowOtherController:(IPDNativeExpressFeedAd *)nativeAd{
     
 }
 
-- (void)IPD_nativeExpressFeedAdDidCloseOtherController:(IPDNativeExpressFeedAd *)nativeAd{
+- (void)ipd_nativeExpressFeedAdDidCloseOtherController:(IPDNativeExpressFeedAd *)nativeAd{
     
 }
 

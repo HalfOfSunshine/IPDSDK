@@ -104,14 +104,16 @@
 #pragma mark =============== lazyload ===============
 -(UIView *)bottomView{
     if (!_bottomView) {
-        _bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_W, 100)];
+        _bottomView = [[UIView alloc]initWithFrame:CGRectMake(0, SCREEN_H-100, SCREEN_W, 100)];
         _bottomView.backgroundColor = [UIColor whiteColor];
         
-        UILabel *titleLabel = [[UILabel alloc]init];
+        UILabel *titleLabel = [[UILabel alloc]initWithFrame:_bottomView.bounds];
+        titleLabel.textAlignment = NSTextAlignmentCenter;
         titleLabel.textColor = [UIColor redColor];
         titleLabel.font = [UIFont boldSystemFontOfSize:24];
         titleLabel.text = @"LOGO";
         [_bottomView addSubview:titleLabel];
+        
     }
     return _bottomView;
 }

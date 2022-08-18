@@ -27,8 +27,8 @@
         [self addChildViewController:vc];
         [self.view addSubview:vc.view];
     }else{
-        UILabel *remindLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 100, SCREEN_W, SCREEN_H-100)];
-        remindLab.text = @"     视频内容需要内容包支持，请下载sdk，单独手动导入快手模块.\n    其他模块正常导入即可，不影响";
+        UILabel *remindLab = [[UILabel alloc]initWithFrame:CGRectMake(15, 100, SCREEN_W-30, SCREEN_H-100)];
+        remindLab.text = @"     视频内容需要快手内容包支持，内容包目前不支持pod导入，请下载sdk，单独手动导入快手模块.\n    其他模块正常pod导入即可，相互不依赖";
         remindLab.numberOfLines = 5;
         [self.view addSubview:remindLab];
     }

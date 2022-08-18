@@ -8,7 +8,8 @@
 
 #import "FloatingAdVC.h"
 
-@interface FloatingAdVC ()
+@interface FloatingAdVC ()<IPDFloatingAdViewDelegate>
+@property (nonatomic,strong)IPDFloatingAdView *floatingAd;
 
 @end
 
@@ -21,15 +22,38 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-//    @"J8595471688",@"J9666281550"
+
     if (self.isFirstLoad) {
-        [self loadAd:@"J8595471688"];
+        [self loadAd:@"J2952950117"];
         self.isFirstLoad = NO;
     }
 }
 
 -(void) loadAd:(NSString*) adId{
+    self.floatingAd = [[IPDFloatingAdView alloc]initWithPlacementId:adId frame:CGRectZero];
+    self.floatingAd.delegate = self;
+    self.floatingAd.backImage = [UIImage imageNamed:@"ipd_h5_back"];
+    self.floatingAd.hiddenH5CloseButton = YES;
+    self.floatingAd.closeText = [[NSAttributedString alloc]initWithString:@"关闭" attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
+    [self.floatingAd loadAd];
+}
 
+-(void)ipd_floatingAdViewDidLoad:(IPDFloatingAdView *)floatingAdView{
+    NSLog(@"%s",__FUNCTION__);
+    [self.view addSubview:floatingAdView];
+}
+
+-(void)ipd_floatingAdViewError:(IPDFloatingAdView *)floatingAdView error:(NSError *)error{
+    NSLog(@"%s",__FUNCTION__);
+}
+
+-(void)ipd_floatingAdViewDidClick:(IPDFloatingAdView *)floatingAdView{
+    NSLog(@"%s",__FUNCTION__);
+}
+
+-(void)ipd_floatingAdViewDidClose:(IPDFloatingAdView *)floatingAdView{
+    NSLog(@"%s",__FUNCTION__);
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 /*

@@ -17,32 +17,32 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 广告渲染成功
  */
-- (void)IPD_nativeExpressFeedAdRenderSuccess:(IPDNativeExpressFeedAd *)feedAd;
+- (void)ipd_nativeExpressFeedAdRenderSuccess:(IPDNativeExpressFeedAd *)feedAd;
 /**
  * 广告渲染失败
  */
-- (void)IPD_nativeExpressFeedAdRenderFail:(IPDNativeExpressFeedAd *)feedAd;
+- (void)ipd_nativeExpressFeedAdRenderFail:(IPDNativeExpressFeedAd *)feedAd;
 
 /**
  *广告即将展示
  */
-- (void)IPD_nativeExpressFeedAdViewWillShow:(IPDNativeExpressFeedAd *)feedAd;
+- (void)ipd_nativeExpressFeedAdViewWillShow:(IPDNativeExpressFeedAd *)feedAd;
 /**
  *广告点击
  */
-- (void)IPD_nativeExpressFeedAdDidClick:(IPDNativeExpressFeedAd *)feedAd;
+- (void)ipd_nativeExpressFeedAdDidClick:(IPDNativeExpressFeedAd *)feedAd;
 /**
  *不喜欢该广告
  */
-- (void)IPD_nativeExpressFeedAdDislike:(IPDNativeExpressFeedAd *)feedAd;
+- (void)ipd_nativeExpressFeedAdDislike:(IPDNativeExpressFeedAd *)feedAd;
 /**
  *展示落地页
  */
-- (void)IPD_nativeExpressFeedAdDidShowOtherController:(IPDNativeExpressFeedAd *)nativeAd;
+- (void)ipd_nativeExpressFeedAdDidShowOtherController:(IPDNativeExpressFeedAd *)nativeAd;
 /**
  *关闭落地页
  */
-- (void)IPD_nativeExpressFeedAdDidCloseOtherController:(IPDNativeExpressFeedAd *)nativeAd;
+- (void)ipd_nativeExpressFeedAdDidCloseOtherController:(IPDNativeExpressFeedAd *)nativeAd;
 
 @end
 

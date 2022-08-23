@@ -14,10 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol IPDNativeExpressFeedAdManagerDelegate <NSObject>
 @optional
 ///load success
-- (void)IPD_nativeExpressFeedAdManagerSuccessToLoad:(IPDNativeExpressFeedAdManager *)adsManager nativeAds:(NSArray<IPDNativeExpressFeedAd *> *_Nullable)feedAdDataArray;
+- (void)ipd_nativeExpressFeedAdManagerSuccessToLoad:(IPDNativeExpressFeedAdManager *)adsManager nativeAds:(NSArray<IPDNativeExpressFeedAd *> *_Nullable)feedAdDataArray;
 
 ///load faile
-- (void)IPD_nativeExpressFeedAdManager:(IPDNativeExpressFeedAdManager *)adsManager didFailWithError:(NSError *_Nullable)error;
+- (void)ipd_nativeExpressFeedAdManager:(IPDNativeExpressFeedAdManager *)adsManager didFailWithError:(NSError *_Nullable)error;
 
 @end
 

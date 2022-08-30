@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface IPDSplashContainerVC : UIViewController
-@property (nonatomic,strong)UIImageView *splashBgImageView;
+@property (nonatomic,strong)UILabel *remindLab;
 
 @end
 

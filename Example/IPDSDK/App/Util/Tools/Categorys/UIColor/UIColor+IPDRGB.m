@@ -30,4 +30,24 @@
               alpha:1.0];
     return result;
 }
+
+#pragma mark === Some wonderful color
++ (UIColor *)tiffanyBlue{
+    return ColorRGBA(129.,216.,207.,1);
+}
++ (UIColor *)avocadoGreen{
+    return ColorRGBA(102.,153.,51.,1);
+}
++ (UIColor *)JesterRed{
+    return ColorHEX(0x9E1030);
+}
++ (UIColor *)LipstickRed{
+    return ColorHEX(0xB31A38);
+}
++ (UIColor *)NFBlue{
+    return ColorHEX(0x40c2c2);
+}
++ (UIColor *)NFPink{
+    return ColorHEX(0xff8070);
+}
 @end

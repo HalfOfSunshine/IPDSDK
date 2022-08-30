@@ -13,7 +13,7 @@
 #ifdef __OBJC__
     @import UIKit;
     @import Foundation;
+#import "IPDCommonHeader.h"
 #import "UIColor+IPDRGB.h"
 #import <IPDSDK/IPDSDK.h>
-#import "IPDCommonHeader.h"
 #endif

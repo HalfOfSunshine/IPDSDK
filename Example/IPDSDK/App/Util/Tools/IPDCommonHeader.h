@@ -70,11 +70,6 @@
 //十六进制颜色
 #define ColorHEX(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
-#pragma mark === Some wonderful color
-#define     Tiffany_Blue        ColorRGB(129.,216.,207.,1)
-#define     Avocado_Green       ColorRGB(102.,153.,51.,1)
-#define     NF_Blue             ColorHEX(0x40c2c2)
-
 #pragma mark === Theme color
 #define     MainColor           ColorHEX(0xB22222)
 #define     BlueColor           ColorHEX(0x40c2c2)

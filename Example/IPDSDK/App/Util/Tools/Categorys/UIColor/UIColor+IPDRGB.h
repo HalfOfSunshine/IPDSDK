@@ -12,6 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (IPDRGB)
 + (UIColor *) colorFromHexRGB:(NSString *) inColorString;
+#pragma mark === Some wonderful color
++ (UIColor *)tiffanyBlue;
++ (UIColor *)avocadoGreen;
++ (UIColor *)JesterRed;
++ (UIColor *)LipstickRed;
++ (UIColor *)NFBlue;
++ (UIColor *)NFPink;
 @end
 
 NS_ASSUME_NONNULL_END

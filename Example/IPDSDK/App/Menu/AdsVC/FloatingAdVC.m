@@ -24,7 +24,7 @@
     [super viewWillAppear:animated];
 
     if (self.isFirstLoad) {
-        [self loadAd:@"J2952950117"];
+        [self loadAd:@"请联系运营申请"];
         self.isFirstLoad = NO;
     }
 }

@@ -10,7 +10,7 @@
 #import <IPDSDKCore/IPDAdUnionItemModel.h>
 #import <IPDSDKCore/IPDAdDebugLog.h>
 #import <IPDSDKCore/IPDBiddingLossRelease.h>
-#import "IPDAdEventReport.h""
+#import <IPDSDKCore/IPDAdEventReport.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface IPDCoreAdAdapter : NSObject

@@ -22,9 +22,8 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-//    @"1080958885885321",@"945778025",@"ipdad_iOS_ZB0001",@"J7564361179",@"J9474896977",@"J7722563364"
     if (self.isFirstLoad) {
-        [self loadAd:@"1080958885885321"];
+        [self loadAd:@"P334tw3t7qdm"];
         self.isFirstLoad = NO;
     }
 }

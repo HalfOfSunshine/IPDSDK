@@ -58,11 +58,18 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)ipd_rewardVideoAdDidPlayFinish:(IPDRewardVideoAd *)rewardedVideoAd;
 
 /**
- 视频广告各种错误信息回调
+ 视频广告加载错误信息回调
  @param rewardedVideoAd IPDRewardVideoAd 实例
  @param error 具体错误信息
  */
 - (void)ipd_rewardVideoAd:(IPDRewardVideoAd *)rewardedVideoAd didFailWithError:(NSError *)error;
+
+/**
+ 视频广告播放错误信息回调
+ @param rewardedVideoAd IPDRewardVideoAd 实例
+ @param error 具体错误信息
+ */
+- (void)ipd_rewardVideoAd:(IPDRewardVideoAd *)rewardedVideoAd displayFailWithError:(NSError *)error;
 
 @end
 

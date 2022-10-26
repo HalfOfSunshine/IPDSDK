@@ -30,11 +30,8 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
-
-    
-//    @"KS90010003",@"zjad_G305034",@"zjad_T945543945"
     if (self.isFirstLoad) {
-        [self loadAd:@"KS90010003"];
+        [self loadAd:@"Pl1qeofsq42g"];
         self.isFirstLoad = NO;
     }
 }

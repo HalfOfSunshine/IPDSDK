@@ -18,7 +18,7 @@ typedef NSString * _Nullable (^IPDCacheAdditionalCachePathBlock)(NSString * _Non
 @protocol IPDCache <NSObject>
 
 @required
-- (id)queryCacheForKey:(NSString *)key completion:(nullable IPDCacheQueryCompletionBlock)completionBlock;
+- (NSDictionary *)queryCacheForKey:(NSString *)key;
 
 - (void)storeDic:(NSDictionary *)dic forKey:(nullable NSString *)key completion:(nullable IPDNoParamsBlock)completionBlock;
 

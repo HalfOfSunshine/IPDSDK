@@ -20,6 +20,7 @@ FOUNDATION_EXPORT NSString * const IPD_ADType_Feed;
 FOUNDATION_EXPORT NSString * const IPD_ADType_NativeAd;
 FOUNDATION_EXPORT NSString * const IPD_ADType_ContentPage;
 FOUNDATION_EXPORT NSString * const IPD_ADType_FullVideoAd;
+FOUNDATION_EXPORT NSString * const IPD_ADType_MiniParam;
 
 typedef NS_ENUM(NSInteger,IPDAdShowPriority){
     IPDAdShowPriority_normal,
@@ -34,6 +35,8 @@ typedef NS_ENUM(NSInteger,IPDAdShowPriority){
 @property (nonatomic, copy) NSString *pd_price;
 
 @property (nonatomic, assign) BOOL is_service;
+
+@property (nonatomic, assign) NSInteger reward_ver;
 
 @property (nonatomic, copy) NSArray <IPDAdUnitModel *>*tiers;
 
@@ -56,6 +59,11 @@ typedef NS_ENUM(NSInteger,IPDAdShowPriority){
 @property (nonatomic, assign) BOOL is_enable;
 
 @property (nonatomic, assign) BOOL is_service;
+
+/// 时间戳
+@property (nonatomic, copy) NSString *msel;
+
+@property (nonatomic, assign) NSInteger reward_ver;
 ///当日限制次数
 @property (nonatomic, assign) NSInteger limit_num;
 ///开始次数

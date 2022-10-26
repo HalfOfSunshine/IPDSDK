@@ -35,10 +35,7 @@ typedef void (^IPDCacheCompletionBlock)(NSDictionary* _Nullable dic,NSError *_Nu
 
 #pragma mark =============== 取 ===============
 
-/// 根据key取字典
-/// @param key 广告位ID
-/// @param completedBlock 取字典完成的block
-- (void)loadCacheForKey:(nonnull NSString *)key completed:(nullable IPDCacheCompletionBlock)completedBlock;
+-(NSDictionary *)loadCacheForKey:(nonnull NSString *)key;
 
 
 

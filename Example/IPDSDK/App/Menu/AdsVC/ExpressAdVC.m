@@ -29,7 +29,6 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-//    @"G3061112693227741",@"K4000000007",@"T945740162",@"zjad_iOS_ZF0001",@"K4000000008"
     if (self.isFirstLoad) {
         [self loadAd];
         self.isFirstLoad = NO;
@@ -38,7 +37,7 @@
 
 -(void) loadAd{
     if (!_expressAdManager) {
-        _expressAdManager = [[IPDNativeExpressFeedAdManager alloc] initWithPlacementId:@"G3061112693227741" size:CGSizeMake(self.table.frame.size.width, 0)];
+        _expressAdManager = [[IPDNativeExpressFeedAdManager alloc] initWithPlacementId:@"P8elfpe027yz" size:CGSizeMake(self.table.frame.size.width, 0)];
         _expressAdManager.delegate = self;
         _expressAdManager.mutedIfCan = YES;
     }

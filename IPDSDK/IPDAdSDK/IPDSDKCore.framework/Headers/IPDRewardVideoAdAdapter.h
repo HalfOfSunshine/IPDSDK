@@ -36,6 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)ipd_rewardVideoAdDidFailWithError:(NSError *)error;
 
+- (void)ipd_rewardVideoAdDisplayFailWithError:(NSError *)error;
+
 @end
 
 NS_ASSUME_NONNULL_END

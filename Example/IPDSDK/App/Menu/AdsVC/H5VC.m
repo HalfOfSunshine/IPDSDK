@@ -23,9 +23,8 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-//    @"zjad_h500001iostest",@"J7539616190",@"J6596738679",@"J1009546769",@"J1747131627",@"J1194046705",@"J6060320975"
     if (self.isFirstLoad) {
-        [self loadAd:@"zjad_h500001iostest"];
+        [self loadAd:@"请联系运营申请"];
         self.isFirstLoad = NO;
     }
 }
@@ -33,10 +32,10 @@
 -(void) loadAd:(NSString*) adId{
     IPDUser *user = [IPDUser new];
     user.userID = @"00012282";
-    user.userName = @"吊炸天524";
+    user.userName = @"defaultUserName";
     user.userAvatar = @"";
-    user.userIntegral = 10000;
-    user.ext = @"超级无敌4";
+    user.userIntegral = 0;
+    user.ext = @"扩展信息";
     self.ipdH5Page = [[IPDH5Page alloc] initWithPlacementId:adId user:user delegate:self];
     [self.ipdH5Page loadH5Page];
 }

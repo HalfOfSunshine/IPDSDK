@@ -21,9 +21,8 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-//    @"J2068944817",@"J9684504174"
     if (self.isFirstLoad) {
-        [self loadAd:@"J2068944817"];
+        [self loadAd:@"Px4fam46175k"];
         self.isFirstLoad = NO;
     }
 }

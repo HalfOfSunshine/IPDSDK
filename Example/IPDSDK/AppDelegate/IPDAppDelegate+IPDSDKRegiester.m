@@ -13,7 +13,7 @@
 //ipd_20201014iOSDEMO
 
 - (void)setupIPDSDK{
-    [IPDAdSDK setAppID:@"zj_20201014iOSDEMO"];
+    [IPDAdSDK setAppID:@"Ibh2udfg4"];
     [IPDAdSDK setLogLevel:IPDAdSDKLogLevelDebug];
     NSString *version = [IPDAdSDK SDKVersion];
     NSLog(@"IPDSDK version：%@",version);
@@ -21,7 +21,7 @@
 }
 
 -(void)showSplashAdIfCan{
-    self.splashAd = [[IPDSplashAd alloc]initWithPlacementId:@"J8648995207"];
+    self.splashAd = [[IPDSplashAd alloc]initWithPlacementId:@"Pulcfghrl0c3"];
     self.splashAd.fetchDelay = 5;
     self.splashAd.delegate = self;
     self.splashAd.customBottomView = self.bottomView;

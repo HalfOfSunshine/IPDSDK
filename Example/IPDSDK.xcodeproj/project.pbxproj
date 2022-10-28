@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1ADC4AF091E4D5D871C91CB4 /* Pods_IPDSDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0086890A038E9DF53546D69 /* Pods_IPDSDK_Example.framework */; };
+		28B4C7BC6CB48AA759147E2F /* libPods-IPDSDK_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 090690702BAB236682DC8755 /* libPods-IPDSDK_Tests.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -131,7 +131,7 @@
 		ABF8D0BE28AE15FD00B6FAB3 /* SDDisplayLink.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF8D07828AE15FD00B6FAB3 /* SDDisplayLink.m */; };
 		ABF8D0BF28AE15FD00B6FAB3 /* SDAsyncBlockOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF8D07A28AE15FD00B6FAB3 /* SDAsyncBlockOperation.m */; };
 		ABF8D0C028AE15FD00B6FAB3 /* SDAssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF8D07B28AE15FD00B6FAB3 /* SDAssociatedObject.m */; };
-		EE4268626A6506AC07DE6C1C /* Pods_IPDSDK_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 901A7334E1E12934FF4A6544 /* Pods_IPDSDK_Tests.framework */; };
+		DCBCB015A3C07A4E4314E393 /* libPods-IPDSDK_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D3AE121CB272D41A447432 /* libPods-IPDSDK_Example.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +145,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		090690702BAB236682DC8755 /* libPods-IPDSDK_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IPDSDK_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16D3AE121CB272D41A447432 /* libPods-IPDSDK_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IPDSDK_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		282D75282DA60692F3BCBABB /* Pods-IPDSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPDSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-IPDSDK_Example/Pods-IPDSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		379536EF6043DE7E8FA2F323 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* IPDSDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPDSDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,7 +168,6 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6F564BD2A94126A78266A1F3 /* IPDSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = IPDSDK.podspec; path = ../IPDSDK.podspec; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		901A7334E1E12934FF4A6544 /* Pods_IPDSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IPDSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9208E04BDAFE8A4EEACD4A80 /* Pods-IPDSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPDSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-IPDSDK_Tests/Pods-IPDSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4CAF7E319868ECCDAD4063B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A6E76C888074B9C71C4E82DD /* Pods-IPDSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPDSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-IPDSDK_Example/Pods-IPDSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -398,7 +399,6 @@
 		ABF8D07928AE15FD00B6FAB3 /* SDImageAssetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageAssetManager.h; sourceTree = "<group>"; };
 		ABF8D07A28AE15FD00B6FAB3 /* SDAsyncBlockOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDAsyncBlockOperation.m; sourceTree = "<group>"; };
 		ABF8D07B28AE15FD00B6FAB3 /* SDAssociatedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDAssociatedObject.m; sourceTree = "<group>"; };
-		C0086890A038E9DF53546D69 /* Pods_IPDSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IPDSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA41559282BBC1AE5BD4BFE1 /* Pods-IPDSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPDSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-IPDSDK_Tests/Pods-IPDSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -410,7 +410,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				1ADC4AF091E4D5D871C91CB4 /* Pods_IPDSDK_Example.framework in Frameworks */,
+				DCBCB015A3C07A4E4314E393 /* libPods-IPDSDK_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +421,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				EE4268626A6506AC07DE6C1C /* Pods_IPDSDK_Tests.framework in Frameworks */,
+				28B4C7BC6CB48AA759147E2F /* libPods-IPDSDK_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,8 +467,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				C0086890A038E9DF53546D69 /* Pods_IPDSDK_Example.framework */,
-				901A7334E1E12934FF4A6544 /* Pods_IPDSDK_Tests.framework */,
+				16D3AE121CB272D41A447432 /* libPods-IPDSDK_Example.a */,
+				090690702BAB236682DC8755 /* libPods-IPDSDK_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -911,7 +911,6 @@
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				C2B3AA85B6E03421065348DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1024,24 +1023,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C2B3AA85B6E03421065348DB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-IPDSDK_Tests/Pods-IPDSDK_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IPDSDK_Tests/Pods-IPDSDK_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

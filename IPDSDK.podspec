@@ -66,7 +66,7 @@ TODO: Add long description of the pod here.
     ss.vendored_libraries = 'IPDSDK/IPDSDKModuleKS/*.a'
     ss.dependency 'IPDSDK/IPDAdSDK'
 #    ss.vendored_frameworks = 'IPDSDK/IPDSDKModuleKS/KSAdSDK.framework'
-    ss.dependency 'KSAdSDK', '~> 3.3'
+    ss.dependency 'KSAdSDK', '~> 3.3.6'
   end
 
   s.subspec 'IPDSDKModuleMTG' do |ss|
@@ -90,7 +90,7 @@ TODO: Add long description of the pod here.
   s.subspec 'IPDSDKModuleSIG' do |ss|
     ss.vendored_libraries = 'IPDSDK/IPDSDKModuleSIG/*.a'
     ss.dependency 'IPDSDK/IPDAdSDK'
-    ss.dependency 'SigmobAd-iOS', '~> 3.4.3'
+    ss.dependency 'SigmobAd-iOS', '~> 4.3.0'
   end
 
   s.subspec 'IPDSDKModuleYM' do |ss|
@@ -111,6 +111,6 @@ TODO: Add long description of the pod here.
  s.subspec 'IPDSDKModuleBD' do |ss|
    ss.vendored_libraries = 'IPDSDK/IPDSDKModuleBD/*.a'
    ss.dependency 'IPDSDK/IPDAdSDK'
-   ss.dependency 'BaiduMobAdSDK'
+   ss.dependency 'BaiduMobAdSDK', '~> 4.81'
  end
 end

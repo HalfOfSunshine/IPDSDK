@@ -6,8 +6,10 @@
 //  Copyright © 2022 ipd. All rights reserved.
 //
 
-#import "IPDAd.h"
+#import <IPDSDK/IPDBiddingAd.h>
 #import <IPDSDKCore/IPDSDKAdEnum.h>
+#import <IPDSDKCore/IPDFullScreenVideoAdAdapter.h>
+
 NS_ASSUME_NONNULL_BEGIN
 @class IPDFullScreenVideoAd;
 @protocol IPDFullScreenVideoAdDelegate <NSObject>
@@ -41,9 +43,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface IPDFullScreenVideoAd : IPDAd
+@interface IPDFullScreenVideoAd : IPDBiddingAd <IPDfullScreenVideoAdAdapterDelegate>
 
 @property (nonatomic, weak) id <IPDFullScreenVideoAdDelegate> delegate;
+
+@property (nonatomic, strong)IPDFullScreenVideoAdAdapter *currentAdapter;
 
 ///视频静音， 默认：NO
 @property (nonatomic) BOOL mutedIfCan;

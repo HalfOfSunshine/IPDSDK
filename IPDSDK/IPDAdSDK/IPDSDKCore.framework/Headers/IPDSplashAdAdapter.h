@@ -4,13 +4,13 @@
 //
 //  Created by Robin on 2020/12/22.
 //
+#import <IPDSDKCore/IPDBiddingAdAdapter.h>
+#import <IPDSDKCore/IPDSplashAdProtocol.h>
+#import <IPDSDKCore/IPDSplashAdAdapterDelegate.h>
 
-#import "IPDCoreAdAdapter.h"
-#import "IPDSplashAdProtocol.h"
-#import "IPDSplashAdAdapterDelegate.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface IPDSplashAdAdapter : IPDCoreAdAdapter<IPDSplashAdProtocol>
+@interface IPDSplashAdAdapter : IPDBiddingAdAdapter<IPDSplashAdProtocol>
 
 
 @property(nonatomic,weak) id<IPDSplashAdAdapterDelegate> delegate;

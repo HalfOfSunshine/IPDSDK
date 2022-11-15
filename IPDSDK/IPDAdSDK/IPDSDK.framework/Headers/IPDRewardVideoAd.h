@@ -6,8 +6,10 @@
 //  Copyright © 2022 ipd. All rights reserved.
 //
 
-#import "IPDAd.h"
+#import <IPDSDK/IPDBiddingAd.h>
 #import <IPDSDKCore/IPDRewardVideoAdProtocol.h>
+#import <IPDSDKCore/IPDRewardVideoAdAdapter.h>
+
 NS_ASSUME_NONNULL_BEGIN
 @class  IPDRewardVideoAd;
 @protocol IPDRewardVideoAdDelegate <NSObject>
@@ -74,9 +76,11 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-@interface IPDRewardVideoAd : IPDAd <IPDRewardVideoAdProtocol>
+@interface IPDRewardVideoAd : IPDBiddingAd <IPDRewardVideoAdProtocol,IPDRewardVideoAdAdapterDelegate>
 
 @property (nonatomic, weak) id <IPDRewardVideoAdDelegate> delegate;
+
+@property (nonatomic,strong)IPDRewardVideoAdAdapter *currentAdapter;
 
 /**激励视频初始化方法
 @param placementId   required 激励视频广告位ID

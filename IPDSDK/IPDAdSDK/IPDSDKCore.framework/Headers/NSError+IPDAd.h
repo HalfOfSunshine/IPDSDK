@@ -14,7 +14,8 @@ typedef NS_ENUM(NSInteger,IPDErrorCodeAd){
     IPDErrorCodeAd_Timeout = 100200,
     IPDErrorCodeAd_LackLibraries = 100201,
     IPDErrorCodeAd_AdId = 100202,
-    
+    IPDErrorCodeAd_AllAdReturnError = 100203,
+
     IPDErrorCodeAd_is_being_limit = 100301,
     
     

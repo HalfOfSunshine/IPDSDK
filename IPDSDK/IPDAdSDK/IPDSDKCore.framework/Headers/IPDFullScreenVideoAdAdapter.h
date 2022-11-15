@@ -5,7 +5,7 @@
 //  Created by IpdCoder on 2021/4/27.
 //
 
-#import "IPDCoreAdAdapter.h"
+#import <IPDSDKCore/IPDBiddingAdAdapter.h>
 #import <UIKit/UIKit.h>
 #import "IPDSDKAdEnum.h"
 NS_ASSUME_NONNULL_BEGIN
@@ -33,15 +33,13 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-@interface IPDFullScreenVideoAdAdapter : IPDCoreAdAdapter
+@interface IPDFullScreenVideoAdAdapter : IPDBiddingAdAdapter
 
 
 @property(nonatomic,weak) id<IPDfullScreenVideoAdAdapterDelegate> delegate;
 
 ///视频静音， 默认：NO
 @property (nonatomic) BOOL mutedIfCan;
-
--(void)loadAd;
 
 -(void)presentAdFromRootViewController:(UIViewController*)viewController;
 

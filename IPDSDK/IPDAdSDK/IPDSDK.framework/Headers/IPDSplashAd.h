@@ -6,8 +6,9 @@
 //  Copyright © 2022 ipd. All rights reserved.
 //
 
-#import "IPDAd.h"
+#import <IPDSDK/IPDBiddingAd.h>
 #import <IPDSDKCore/IPDSplashAdProtocol.h>
+#import <IPDSDKCore/IPDSplashAdAdapter.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @class IPDSplashAd;
@@ -59,9 +60,10 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-@interface IPDSplashAd : IPDAd <IPDSplashAdProtocol>
+@interface IPDSplashAd : IPDBiddingAd<IPDSplashAdProtocol,IPDSplashAdAdapterDelegate>
 
 @property (nonatomic, weak) id <IPDSplashAdDelegate> delegate;
+@property (nonatomic,strong)IPDSplashAdAdapter *currentAdapter;
 
 @end
 

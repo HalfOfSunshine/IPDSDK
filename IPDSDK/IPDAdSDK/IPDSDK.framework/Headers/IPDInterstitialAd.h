@@ -6,8 +6,10 @@
 //  Copyright © 2022 ipd. All rights reserved.
 //
 
-#import "IPDAd.h"
+#import <IPDSDK/IPDBiddingAd.h>
 #import <IPDSDKCore/IPDInterstitialAdProtocol.h>
+#import <IPDSDKCore/IPDInterstitialAdAdapterDelegate.h>
+#import <IPDSDKCore/IPDInterstitialAdAdapter.h>
 
 NS_ASSUME_NONNULL_BEGIN
 @class IPDInterstitialAd;
@@ -36,10 +38,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface IPDInterstitialAd : IPDAd<IPDInterstitialAdProtocol>
+@interface IPDInterstitialAd : IPDBiddingAd<IPDInterstitialAdProtocol,IPDInterstitialAdAdapterDelegate>
 
 @property(nonatomic,weak) id<IPDInterstitialAdDelegate>delegate;
 
+@property (nonatomic,strong)IPDInterstitialAdAdapter *currentAdapter;
 @end
 
 NS_ASSUME_NONNULL_END

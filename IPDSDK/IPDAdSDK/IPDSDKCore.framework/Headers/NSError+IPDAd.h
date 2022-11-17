@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger,IPDErrorCodeAd){
     IPDErrorCodeAd_Unknown = 100100,
+    IPDErrorCodeAd_Unregistered = 100101,
+
     IPDErrorCodeAd_Timeout = 100200,
     IPDErrorCodeAd_LackLibraries = 100201,
     IPDErrorCodeAd_AdId = 100202,

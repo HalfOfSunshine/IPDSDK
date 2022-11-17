@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic,weak) id<IPDInterstitialAdDelegate>delegate;
 
-@property (nonatomic,strong)IPDInterstitialAdAdapter *currentAdapter;
+@property (nonatomic,strong,nullable)IPDInterstitialAdAdapter *currentAdapter;
 @end
 
 NS_ASSUME_NONNULL_END

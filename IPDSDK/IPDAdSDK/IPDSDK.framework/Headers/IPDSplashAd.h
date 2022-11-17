@@ -63,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface IPDSplashAd : IPDBiddingAd<IPDSplashAdProtocol,IPDSplashAdAdapterDelegate>
 
 @property (nonatomic, weak) id <IPDSplashAdDelegate> delegate;
-@property (nonatomic,strong)IPDSplashAdAdapter *currentAdapter;
+@property (nonatomic,strong,nullable)IPDSplashAdAdapter *currentAdapter;
 
 @end
 

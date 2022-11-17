@@ -47,12 +47,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id <IPDFullScreenVideoAdDelegate> delegate;
 
-@property (nonatomic, strong)IPDFullScreenVideoAdAdapter *currentAdapter;
+@property (nonatomic, strong,nullable)IPDFullScreenVideoAdAdapter *currentAdapter;
 
 ///视频静音， 默认：NO
 @property (nonatomic) BOOL mutedIfCan;
-
-- (void)loadAd;
 
 - (void)presentFullScreenVideoAdFromRootViewController:(UIViewController *)viewController;
 

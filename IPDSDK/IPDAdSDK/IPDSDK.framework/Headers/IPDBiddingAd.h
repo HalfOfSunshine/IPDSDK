@@ -54,7 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,strong)IPDBiddingAdAdapter *ecpm1Adapter;
 
-@property (nonatomic,strong)IPDBiddingAdAdapter *currentAdapter;
+@property (nonatomic,strong,nullable)IPDBiddingAdAdapter *currentAdapter;
 
 //错误信息数组
 @property (nonatomic,strong)NSMutableArray <NSError *>*adFailArray;

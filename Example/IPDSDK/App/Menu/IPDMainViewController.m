@@ -161,6 +161,7 @@
                         @"视频流":@"VideoExpressAdVC",
                         
                         @"自渲染":@"NativeRenderVC",
+                        @"新闻资讯":@"NewsVC",
                         @"H5页面":@"H5VC",
                         @"悬浮广告":@"FloatingAdVC",
                         @"JS交互":@"JSBridgeVC"};
@@ -181,6 +182,7 @@
                           @"视频流",
                           
                           @"自渲染",
+                          @"新闻资讯",
                           @"悬浮广告",
                           @"H5页面",
                           @"JS交互"];

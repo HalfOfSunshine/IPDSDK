@@ -55,6 +55,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)ipd_splashAdError:(IPDSplashAd *)splashAd withError:(NSError *)error;
 
+/**
+ *  开屏广告播放错误
+ */
+- (void)ipd_splashAdDisplayError:(IPDSplashAd *)splashAd withError:(NSError *)error;
+
 /// 奖励触发
 - (void)ipd_splashAdAdapterDidRewardEffective:(IPDSplashAd *)splashAd withInfo:(nullable NSDictionary *)info;
 @end

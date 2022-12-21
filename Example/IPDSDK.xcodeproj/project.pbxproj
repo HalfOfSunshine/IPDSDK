@@ -23,6 +23,8 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		AB5CA25E28ABA7B900B44D3B /* IPDExpressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5CA25C28ABA7B900B44D3B /* IPDExpressCell.m */; };
 		AB5CA25F28ABA7B900B44D3B /* IPDExpressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB5CA25D28ABA7B900B44D3B /* IPDExpressCell.xib */; };
+		AB706EEA2952C6BC006C5B4F /* NewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB706EE92952C6BC006C5B4F /* NewsVC.m */; };
+		AB706EEC2952CAEE006C5B4F /* DeviceCheck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB706EEB2952CAEE006C5B4F /* DeviceCheck.framework */; };
 		AB74231E28AC934C0097451E /* IPDExpressAdCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB74231D28AC934C0097451E /* IPDExpressAdCell.m */; };
 		AB792B8028A6294C00716E35 /* IPDAppDelegate+IPDSDKRegiester.m in Sources */ = {isa = PBXBuildFile; fileRef = AB792B7F28A6294C00716E35 /* IPDAppDelegate+IPDSDKRegiester.m */; };
 		AB792B8B28AA160E00716E35 /* IPDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB792B8928A9FA2600716E35 /* IPDMainViewController.m */; };
@@ -174,6 +176,9 @@
 		AB5CA25B28ABA7B900B44D3B /* IPDExpressCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPDExpressCell.h; sourceTree = "<group>"; };
 		AB5CA25C28ABA7B900B44D3B /* IPDExpressCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPDExpressCell.m; sourceTree = "<group>"; };
 		AB5CA25D28ABA7B900B44D3B /* IPDExpressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IPDExpressCell.xib; sourceTree = "<group>"; };
+		AB706EE82952C6BC006C5B4F /* NewsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsVC.h; sourceTree = "<group>"; };
+		AB706EE92952C6BC006C5B4F /* NewsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsVC.m; sourceTree = "<group>"; };
+		AB706EEB2952CAEE006C5B4F /* DeviceCheck.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceCheck.framework; path = System/Library/Frameworks/DeviceCheck.framework; sourceTree = SDKROOT; };
 		AB74231C28AC934C0097451E /* IPDExpressAdCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPDExpressAdCell.h; sourceTree = "<group>"; };
 		AB74231D28AC934C0097451E /* IPDExpressAdCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPDExpressAdCell.m; sourceTree = "<group>"; };
 		AB792B7E28A6294C00716E35 /* IPDAppDelegate+IPDSDKRegiester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IPDAppDelegate+IPDSDKRegiester.h"; sourceTree = "<group>"; };
@@ -407,6 +412,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB706EEC2952CAEE006C5B4F /* DeviceCheck.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
@@ -463,6 +469,7 @@
 		6003F58C195388D20070C39A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AB706EEB2952CAEE006C5B4F /* DeviceCheck.framework */,
 				6003F58D195388D20070C39A /* Foundation.framework */,
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
@@ -663,6 +670,8 @@
 				AB8E70F328AB5A8400686A70 /* FullScreenVideoVC.m */,
 				AB8E70F528AB5A9300686A70 /* BannerVC.h */,
 				AB8E70F628AB5A9300686A70 /* BannerVC.m */,
+				AB706EE82952C6BC006C5B4F /* NewsVC.h */,
+				AB706EE92952C6BC006C5B4F /* NewsVC.m */,
 				AB8E70F828AB5AB400686A70 /* ContentPageVC.h */,
 				AB8E70F928AB5AB400686A70 /* ContentPageVC.m */,
 				AB8E710B28AB72D700686A70 /* ExpressAdVC.h */,
@@ -893,6 +902,8 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
+				807E143C71AAB0EC74A9A59B /* [CP] Embed Pods Frameworks */,
+				4588F2AF6D61268E0A82EC2D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -932,6 +943,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Mountain King";
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = FDRWRXCL7C;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -981,6 +995,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4588F2AF6D61268E0A82EC2D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IPDSDK_Example/Pods-IPDSDK_Example-resources.sh",
+				"${PODS_ROOT}/Ads-CN-Beta/SDK/LICENSE",
+				"${PODS_ROOT}/Ads-CN-Beta/SDK/CSJAdSDK.bundle",
+				"${PODS_ROOT}/BaiduMobAdSDK/baidumobadsdk.bundle",
+				"${PODS_ROOT}/../../IPDSDK/IPDSDKModuleDSP/IPDSDKBundle.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LICENSE",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CSJAdSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/baidumobadsdk.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IPDSDKBundle.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IPDSDK_Example/Pods-IPDSDK_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		807E143C71AAB0EC74A9A59B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IPDSDK_Example/Pods-IPDSDK_Example-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/KSAdSDK/KSAdSDK.framework/KSAdSDK",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KSAdSDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IPDSDK_Example/Pods-IPDSDK_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		87C92EC63B0EAE74FEC1B5C3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1080,6 +1136,7 @@
 				ABF8D0B928AE15FD00B6FAB3 /* SDDeviceHelper.m in Sources */,
 				ABF8D0AD28AE15FD00B6FAB3 /* SDImageCacheConfig.m in Sources */,
 				ABF8D0A728AE15FD00B6FAB3 /* SDImageTransformer.m in Sources */,
+				AB706EEA2952C6BC006C5B4F /* NewsVC.m in Sources */,
 				ABF8D0AA28AE15FD00B6FAB3 /* SDImageGraphics.m in Sources */,
 				AB8E710028AB5AF200686A70 /* H5VC.m in Sources */,
 				ABF8D09128AE15FD00B6FAB3 /* SDImageCodersManager.m in Sources */,
@@ -1269,6 +1326,7 @@
 			baseConfigurationReference = 282D75282DA60692F3BCBABB /* Pods-IPDSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FDRWRXCL7C;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IPDSDK/IPDSDK-Prefix.pch";
 				INFOPLIST_FILE = "IPDSDK/IPDSDK-Info.plist";
@@ -1413,7 +1471,7 @@
 					"-weak_framework",
 					"\"WebKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.minger.xhk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
@@ -1425,6 +1483,7 @@
 			baseConfigurationReference = A6E76C888074B9C71C4E82DD /* Pods-IPDSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FDRWRXCL7C;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IPDSDK/IPDSDK-Prefix.pch";
 				INFOPLIST_FILE = "IPDSDK/IPDSDK-Info.plist";
@@ -1569,7 +1628,7 @@
 					"-weak_framework",
 					"\"WebKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.minger.xhk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;

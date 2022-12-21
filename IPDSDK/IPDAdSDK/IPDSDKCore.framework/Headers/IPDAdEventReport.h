@@ -15,6 +15,7 @@ FOUNDATION_EXPORT NSString * const IPDAdType_SPLASH;//开屏
 FOUNDATION_EXPORT NSString * const IPDAdType_REWARD;//激励视频
 FOUNDATION_EXPORT NSString * const IPDAdType_H5;//H5
 FOUNDATION_EXPORT NSString * const IPDAdType_Banner;//banner
+FOUNDATION_EXPORT NSString * const IPDAdType_News;//新闻资讯
 FOUNDATION_EXPORT NSString * const IPDAdType_Interstitial;//插屏
 FOUNDATION_EXPORT NSString * const IPDAdType_ExpressFullVideoFeed;//视频流 
 FOUNDATION_EXPORT NSString * const IPDAdType_ContentVideo;//视频内容 

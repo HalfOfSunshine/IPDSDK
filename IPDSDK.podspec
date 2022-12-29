@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IPDSDK'
-  s.version          = '1.0.1.1'
+  s.version          = '1.0.1.2'
   s.summary          = 'IPDSDK广告'
 
 # This description is used to generate tags and improve search results.
@@ -59,7 +59,7 @@ TODO: Add long description of the pod here.
   s.subspec 'IPDSDKModuleCSJ' do |ss|
     ss.vendored_libraries = 'IPDSDK/IPDSDKModuleCSJ/*.a'
     ss.dependency 'IPDSDK/IPDAdSDK'
-    ss.dependency 'Ads-CN-Beta', '~>4.7'
+    ss.dependency 'Ads-CN', '~> 4.7'
   end
 
   s.subspec 'IPDSDKModuleKS' do |ss|

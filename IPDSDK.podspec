@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IPDSDK'
-  s.version          = '1.0.2.1'
+  s.version          = '1.0.3.0'
   s.summary          = 'IPDSDK广告'
 
 # This description is used to generate tags and improve search results.

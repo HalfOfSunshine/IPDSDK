@@ -17,6 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, strong ,readonly) IPDAdUnitModel *config;
 
+///结算价格
+@property (nonatomic, strong) NSString *secondPrice;
+
 - (instancetype)initWithAdItemConfig:(IPDAdUnitModel *)adItemConfig;
 
 

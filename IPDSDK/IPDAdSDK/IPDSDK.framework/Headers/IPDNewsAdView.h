@@ -25,10 +25,10 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  newsAdView曝光回调
  */
-- (void)ipd_newsAdViewWillBecomVisible:(IPDNewsAdView *)newsAdView;
+- (void)ipd_newsAdViewDidShow:(IPDNewsAdView *)newsAdView;
 
 /**
-news广告发奖
+ 关闭news广告回调
  */
 - (void)ipd_newsAdViewRewardEffective:(IPDNewsAdView *)newsAdView;
 
@@ -37,14 +37,20 @@ news广告发奖
  */
 - (void)ipd_newsAdViewDidClick:(IPDNewsAdView *)newsAdView;
 
-
+/**
+ canGoBack状态监听
+ */
+- (void)ipd_newsAd:(IPDNewsAdView *)newsAd canGoBackStateChange:(BOOL)canGoBack;
 @end
 @interface IPDNewsAdView : UIView <IPDNewsAdProtocol>
 @property (nonatomic, copy, readonly) NSString *placementId;
+@property (nonatomic, assign) BOOL enableGoBackGesture;
+@property (nonatomic, assign) BOOL enableSlide;
 
 @property (nonatomic, weak, nullable) id <IPDNewsAdViewDelegate> delegate;
 
 - (instancetype)initWithPlacementId:(NSString *)placementId frame:(CGRect)frame;
+
 - (void)loadAdAndShow;
 - (BOOL)canGoBack;
 - (void)goBack;

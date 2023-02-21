@@ -1305,7 +1305,6 @@
 					"-l\"IPDSDKModuleCSJ\"",
 					"-l\"IPDSDKModuleDSP\"",
 					"-l\"IPDSDKModuleGDT\"",
-					"-l\"IPDSDKModuleKS\"",
 					"-l\"IPDSDKModuleMTG\"",
 					"-l\"IPDSDKModuleSIG\"",
 					"-l\"ObjC\"",
@@ -1371,8 +1370,6 @@
 					"-framework",
 					"\"JavaScriptCore\"",
 					"-framework",
-					"\"KSAdSDK\"",
-					"-framework",
 					"\"MTGSDK\"",
 					"-framework",
 					"\"MTGSDKBanner\"",
@@ -1427,7 +1424,7 @@
 					"-weak_framework",
 					"\"WebKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.minger.xhk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ggzt.chosebuy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
@@ -1462,7 +1459,6 @@
 					"-l\"IPDSDKModuleCSJ\"",
 					"-l\"IPDSDKModuleDSP\"",
 					"-l\"IPDSDKModuleGDT\"",
-					"-l\"IPDSDKModuleKS\"",
 					"-l\"IPDSDKModuleMTG\"",
 					"-l\"IPDSDKModuleSIG\"",
 					"-l\"ObjC\"",
@@ -1528,8 +1524,6 @@
 					"-framework",
 					"\"JavaScriptCore\"",
 					"-framework",
-					"\"KSAdSDK\"",
-					"-framework",
 					"\"MTGSDK\"",
 					"-framework",
 					"\"MTGSDKBanner\"",
@@ -1584,7 +1578,7 @@
 					"-weak_framework",
 					"\"WebKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.minger.xhk;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ggzt.chosebuy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;

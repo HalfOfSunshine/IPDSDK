@@ -15,12 +15,15 @@ FOUNDATION_EXPORT NSString * const IPD_ADType_Interstitial;
 FOUNDATION_EXPORT NSString * const IPD_ADType_NewInterstitial;
 FOUNDATION_EXPORT NSString * const IPD_ADType_RewardVideo;
 FOUNDATION_EXPORT NSString * const IPD_ADType_FeedFullVideo;
+FOUNDATION_EXPORT NSString * const IPD_ADType_FullVideoAd;
 FOUNDATION_EXPORT NSString * const IPD_ADType_Banner;
 FOUNDATION_EXPORT NSString * const IPD_ADType_News;
 FOUNDATION_EXPORT NSString * const IPD_ADType_Feed;
 FOUNDATION_EXPORT NSString * const IPD_ADType_NativeAd;
 FOUNDATION_EXPORT NSString * const IPD_ADType_ContentPage;
-FOUNDATION_EXPORT NSString * const IPD_ADType_FullVideoAd;
+FOUNDATION_EXPORT NSString * const IPD_ADType_FeedPage;
+FOUNDATION_EXPORT NSString * const IPD_ADType_HorizontalFeed;
+FOUNDATION_EXPORT NSString * const IPD_ADType_ImageTextPage;
 FOUNDATION_EXPORT NSString * const IPD_ADType_MiniParam;
 
 typedef NS_ENUM(NSInteger,IPDAdShowPriority){

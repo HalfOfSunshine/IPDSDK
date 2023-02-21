@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  newsAdView曝光回调
  */
-- (void)ipdad_newsAdViewWillBecomVisible:(IPDNewsAdAdapter *)newsAd;
+- (void)ipdad_newsAdViewDidShow:(IPDNewsAdAdapter *)newsAd;
 
 /**
  关闭news广告回调
@@ -36,17 +36,25 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)ipdad_newsAdViewDidClick:(IPDNewsAdAdapter *)newsAd;
 
+/**
+ canGoBack状态监听
+ */
+- (void)ipdad_newsAd:(IPDNewsAdAdapter *)newsAd canGoBackStateChange:(BOOL)canGoBack;
+
 @end
 
 @interface IPDNewsAdAdapter : IPDCoreAdAdapter <IPDNewsAdProtocol>
 @property(nonatomic,weak) id<IPDNewsAdAdapterDelegate> delegate;
-@property (nonatomic,weak)UIView *adView;
-@property (nonatomic, strong) UILabel *remindLab;
+@property (nonatomic,strong)UIView *adView;
 - (instancetype)initWithAdItemConfig:(IPDAdUnitModel *)adItemConfig frame:(CGRect)frame;
 @property (nonatomic, readonly) BOOL canGoBack;
 @property (nonatomic, readonly) BOOL canGoForward;
-- (void)goBack;
-- (void)goForward;
+@property (nonatomic, assign) BOOL enableGoBackGesture;
+@property (nonatomic, assign) BOOL enableSlide;
+- (BOOL)goBack;
+- (BOOL)goForward;
+- (void)removeTimer;
+
 //- (void)reload;
 //- (void)stopLoading;
 
@@ -64,7 +72,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  newsAdView曝光回调
  */
-- (void)ipdad_newsAdViewWillBecomVisible:(IPDNewsAdAdapter *)newsAd;
+- (void)ipdad_newsAdViewDidShow:(IPDNewsAdAdapter *)newsAd;
 
 /**
  news广告发奖回调
@@ -76,7 +84,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)ipdad_newsAdViewDidClick:(IPDNewsAdAdapter *)newsAd;
 
-
+/**
+ canGoBack状态监听
+ */
+- (void)ipdad_newsAdCanGoBackStateChange:(BOOL)canGoBack;
 @end
 
 NS_ASSUME_NONNULL_END

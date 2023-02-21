@@ -22,7 +22,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setBackBarButton];
+
 }
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if (self.isFirstLoad) {
+        [self loadAd:AdId_News];
+        self.isFirstLoad = NO;
+    }
+}
+
 -(void)setBackBarButton{
     //返回按钮
     UIButton *backButton  =  [[UIButton alloc] init];
@@ -59,43 +69,50 @@
     }
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    if (self.isFirstLoad) {
-        [self loadAd:@"请联系运营索取"];
-        self.isFirstLoad = NO;
-    }
-}
-
-
 #pragma mark =============== IPDNewsAdViewDelegate ===============
 /**
  news广告加载成功
  */
 - (void)ipd_newsAdViewDidLoad:(IPDNewsAdView *)newsAdView{
-    NSLog(@"====：%@",NSStringFromSelector(_cmd));
+    NSLog(@"%@",NSStringFromSelector(_cmd));
 }
 
+- (void)ipd_newsAdViewDidShow:(IPDNewsAdView *)newsAdView{
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+}
 /**
  news广告加载失败
  */
 - (void)ipd_newsAdView:(IPDNewsAdView *)newsAdView didLoadFailWithError:(NSError * _Nullable)error{
-    NSLog(@"====：%@",NSStringFromSelector(_cmd));
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+
     [self.newsAdView removeFromSuperview];
+
 }
 
 /**
  news广告奖励触发回调
  */
 - (void)ipd_newsAdViewRewardEffective:(IPDNewsAdView *)newsAdView{
-    NSLog(@"====：%@",NSStringFromSelector(_cmd));
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+
 }
 
 /**
  点击news广告回调
  */
 - (void)ipd_newsAdViewDidClick:(IPDNewsAdView *)newsAdView{
-    NSLog(@"====：%@",NSStringFromSelector(_cmd));
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+
+}
+
+/**
+ canGoBack状态监听
+ */
+- (void)ipd_newsAd:(IPDNewsAdView *)newsAd canGoBackStateChange:(BOOL)canGoBack{
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+    self.newsAdView.enableGoBackGesture = canGoBack;
+    self.newsAdView.enableSlide = !canGoBack;
 }
 
 -(void)loadAd:(NSString*) adId{
@@ -103,7 +120,7 @@
         [_newsAdView removeFromSuperview];
         _newsAdView = nil;
     }
-    self.newsAdView = [[IPDNewsAdView alloc] initWithPlacementId:adId frame:self.view.bounds];
+    self.newsAdView = [[IPDNewsAdView alloc] initWithPlacementId:adId frame:CGRectMake(0, IPD_StatusBarHeight+44, IPD_ScreenWidth, IPD_ScreenHeight-IPD_StatusBarHeight-44)];
     self.newsAdView.delegate = self;
     [self.newsAdView loadAdAndShow];
     [self.view addSubview:self.newsAdView];

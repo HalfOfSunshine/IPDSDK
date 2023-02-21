@@ -156,7 +156,11 @@
                         @"Banner广告":@"BannerVC",
                         
                         @"全屏视频":@"FullScreenVideoVC",
-                        @"视频内容":@"ContentPageVC",
+                        @"视频内容列表":@"ContentPageVC",
+                        @"视频内容瀑布流":@"FeedPageVC",
+                        @"视频内容横版":@"HorizontalFeedPageVC",
+                        @"视频内容图文":@"ImageTextVC",
+                        
                         @"信息流":@"ExpressAdVC",
                         @"视频流":@"VideoExpressAdVC",
                         
@@ -177,7 +181,10 @@
                           @"Banner广告",
                           
                           @"全屏视频",
-                          @"视频内容",
+                          @"视频内容列表",
+                          @"视频内容瀑布流",
+                          @"视频内容横版",
+                          @"视频内容图文",
                           @"信息流",
                           @"视频流",
                           

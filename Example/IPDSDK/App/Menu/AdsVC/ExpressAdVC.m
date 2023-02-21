@@ -37,7 +37,7 @@
 
 -(void) loadAd{
     if (!_expressAdManager) {
-        _expressAdManager = [[IPDNativeExpressFeedAdManager alloc] initWithPlacementId:@"P8elfpe027yz" size:CGSizeMake(self.table.frame.size.width, 0)];
+        _expressAdManager = [[IPDNativeExpressFeedAdManager alloc] initWithPlacementId:AdId_ExpressAd size:CGSizeMake(self.table.frame.size.width, 0)];
         _expressAdManager.delegate = self;
         _expressAdManager.mutedIfCan = YES;
     }

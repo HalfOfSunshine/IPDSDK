@@ -15,5 +15,6 @@
     @import Foundation;
 #import "IPDCommonHeader.h"
 #import "UIColor+IPDRGB.h"
+#import "IPDAdIds.h"
 #import <IPDSDK/IPDSDK.h>
 #endif

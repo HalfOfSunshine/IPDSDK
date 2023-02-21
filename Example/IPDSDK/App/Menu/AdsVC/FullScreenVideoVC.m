@@ -22,7 +22,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     if (self.isFirstLoad) {
-        [self loadAd:@"Px4fam46175k"];
+        [self loadAd:AdId_FullScreenVideo];
         self.isFirstLoad = NO;
     }
 }

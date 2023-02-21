@@ -21,6 +21,9 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		AB4248E429A4B23B00632BAC /* FeedPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4248DE29A4B23A00632BAC /* FeedPageVC.m */; };
+		AB4248E529A4B23B00632BAC /* HorizontalFeedPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4248DF29A4B23A00632BAC /* HorizontalFeedPageVC.m */; };
+		AB4248E629A4B23B00632BAC /* ImageTextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4248E329A4B23A00632BAC /* ImageTextVC.m */; };
 		AB5CA25E28ABA7B900B44D3B /* IPDExpressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AB5CA25C28ABA7B900B44D3B /* IPDExpressCell.m */; };
 		AB5CA25F28ABA7B900B44D3B /* IPDExpressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB5CA25D28ABA7B900B44D3B /* IPDExpressCell.xib */; };
 		AB706EEA2952C6BC006C5B4F /* NewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AB706EE92952C6BC006C5B4F /* NewsVC.m */; };
@@ -173,6 +176,13 @@
 		9208E04BDAFE8A4EEACD4A80 /* Pods-IPDSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPDSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-IPDSDK_Tests/Pods-IPDSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4CAF7E319868ECCDAD4063B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A6E76C888074B9C71C4E82DD /* Pods-IPDSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPDSDK_Example.release.xcconfig"; path = "Target Support Files/Pods-IPDSDK_Example/Pods-IPDSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
+		AB4248DE29A4B23A00632BAC /* FeedPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedPageVC.m; sourceTree = "<group>"; };
+		AB4248DF29A4B23A00632BAC /* HorizontalFeedPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalFeedPageVC.m; sourceTree = "<group>"; };
+		AB4248E029A4B23A00632BAC /* HorizontalFeedPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalFeedPageVC.h; sourceTree = "<group>"; };
+		AB4248E129A4B23A00632BAC /* FeedPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedPageVC.h; sourceTree = "<group>"; };
+		AB4248E229A4B23A00632BAC /* ImageTextVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTextVC.h; sourceTree = "<group>"; };
+		AB4248E329A4B23A00632BAC /* ImageTextVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTextVC.m; sourceTree = "<group>"; };
+		AB4248EA29A4B3D600632BAC /* IPDAdIds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPDAdIds.h; sourceTree = "<group>"; };
 		AB5CA25B28ABA7B900B44D3B /* IPDExpressCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPDExpressCell.h; sourceTree = "<group>"; };
 		AB5CA25C28ABA7B900B44D3B /* IPDExpressCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPDExpressCell.m; sourceTree = "<group>"; };
 		AB5CA25D28ABA7B900B44D3B /* IPDExpressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IPDExpressCell.xib; sourceTree = "<group>"; };
@@ -674,6 +684,12 @@
 				AB706EE92952C6BC006C5B4F /* NewsVC.m */,
 				AB8E70F828AB5AB400686A70 /* ContentPageVC.h */,
 				AB8E70F928AB5AB400686A70 /* ContentPageVC.m */,
+				AB4248E129A4B23A00632BAC /* FeedPageVC.h */,
+				AB4248DE29A4B23A00632BAC /* FeedPageVC.m */,
+				AB4248E029A4B23A00632BAC /* HorizontalFeedPageVC.h */,
+				AB4248DF29A4B23A00632BAC /* HorizontalFeedPageVC.m */,
+				AB4248E229A4B23A00632BAC /* ImageTextVC.h */,
+				AB4248E329A4B23A00632BAC /* ImageTextVC.m */,
 				AB8E710B28AB72D700686A70 /* ExpressAdVC.h */,
 				AB8E710C28AB72D700686A70 /* ExpressAdVC.m */,
 				AB8E710E28AB73C200686A70 /* VideoExpressAdVC.h */,
@@ -688,6 +704,7 @@
 				AB8E710228AB5B0200686A70 /* FloatingAdVC.m */,
 				AB8E710428AB5B1E00686A70 /* JSBridgeVC.h */,
 				AB8E710528AB5B1E00686A70 /* JSBridgeVC.m */,
+				AB4248EA29A4B3D600632BAC /* IPDAdIds.h */,
 			);
 			path = AdsVC;
 			sourceTree = "<group>";
@@ -1099,6 +1116,7 @@
 				AB792BAB28AA215100716E35 /* NSArray+MASAdditions.m in Sources */,
 				ABF8D09328AE15FD00B6FAB3 /* SDMemoryCache.m in Sources */,
 				AB792BA828AA215100716E35 /* MASCompositeConstraint.m in Sources */,
+				AB4248E529A4B23B00632BAC /* HorizontalFeedPageVC.m in Sources */,
 				ABF8D07E28AE15FD00B6FAB3 /* SDAnimatedImageView+WebCache.m in Sources */,
 				ABF8D09E28AE15FD00B6FAB3 /* UIImage+ExtendedCacheData.m in Sources */,
 				ABF8D0B428AE15FD00B6FAB3 /* UIButton+WebCache.m in Sources */,
@@ -1117,6 +1135,7 @@
 				ABF8D08D28AE15FD00B6FAB3 /* SDWebImageCacheSerializer.m in Sources */,
 				ABF8D08728AE15FD00B6FAB3 /* UIImage+ForceDecode.m in Sources */,
 				ABF8D0AB28AE15FD00B6FAB3 /* SDImageCacheDefine.m in Sources */,
+				AB4248E429A4B23B00632BAC /* FeedPageVC.m in Sources */,
 				ABF8D0A628AE15FD00B6FAB3 /* SDWebImageTransition.m in Sources */,
 				ABF8D0B128AE15FD00B6FAB3 /* UIView+WebCacheOperation.m in Sources */,
 				AB8E711A28AB7BE500686A70 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
@@ -1129,6 +1148,7 @@
 				ABF8D0B028AE15FD00B6FAB3 /* SDWebImageOptionsProcessor.m in Sources */,
 				AB8E710D28AB72D700686A70 /* ExpressAdVC.m in Sources */,
 				ABF8D09028AE15FD00B6FAB3 /* UIImage+GIF.m in Sources */,
+				AB4248E629A4B23B00632BAC /* ImageTextVC.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				AB8E70F428AB5A8400686A70 /* FullScreenVideoVC.m in Sources */,
 				ABF8D09628AE15FD00B6FAB3 /* SDWebImageDownloaderResponseModifier.m in Sources */,

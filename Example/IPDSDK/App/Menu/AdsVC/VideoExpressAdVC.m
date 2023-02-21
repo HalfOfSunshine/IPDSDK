@@ -31,7 +31,7 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     if (self.isFirstLoad) {
-        [self loadAd:@"Pl1qeofsq42g"];
+        [self loadAd:AdId_VideoExpress];
         self.isFirstLoad = NO;
     }
 }

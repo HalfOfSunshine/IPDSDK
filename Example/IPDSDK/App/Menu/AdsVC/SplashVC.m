@@ -23,7 +23,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     if (self.isFirstLoad) {
-        [self loadAd:@"Pulcfghrl0c3"];
+        [self loadAd:AdId_Splash];
         self.isFirstLoad = NO;
     }
 }

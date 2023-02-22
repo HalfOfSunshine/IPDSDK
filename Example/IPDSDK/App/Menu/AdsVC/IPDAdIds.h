@@ -8,7 +8,7 @@
 
 #ifndef IPDAdIds_h
 #define IPDAdIds_h
-#define IPD_Appid               @"zj_20201014iOSDEMO"
+#define IPD_Appid               @"Ibh2udfg4"
 
 #define AdId_None               @"请联系运营申请"
 
@@ -16,8 +16,8 @@
 #define AdId_Reward             @"Puxxpzxw95zx"
 #define AdId_FullScreenVideo    @"Px4fam46175k"
 #define AdId_Banner             @"P334tw3t7qdm"
-#define AdId_News               @"J6316865941"
-#define AdId_ContentPage        @"K90010005"//K90010005
+#define AdId_News               @"请联系运营申请"
+#define AdId_ContentPage        @"请联系运营申请"//K90010005
 #define AdId_ExpressAd          @"P8elfpe027yz"
 #define AdId_VideoExpress       @"Pl1qeofsq42g"
 #define AdId_Splash             @"Pulcfghrl0c3"

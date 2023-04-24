@@ -1,0 +1,58 @@
+//
+//  IPDTierAdLoader.h
+//  IPDSDK
+//
+//  Created by 麻明康 on 2023/2/23.
+//  Copyright © 2023 ipd. All rights reserved.
+//
+
+#import <IPDSDKCore/IPDSDKCore.h>
+#import <IPDSDKCore/IPDTierAdAdapter.h>
+
+NS_ASSUME_NONNULL_BEGIN
+@protocol IPDTierProtocol <NSObject>
+
+@required
+-(IPDTierAdAdapter *)createTierAdapterForUnit:(IPDAdUnitModel *)unit;
+@optional
+
+- (NSInteger)getCountDownInterval;
+@end
+
+@interface IPDTierAdLoader : NSObject <IPDTierProtocol>
+
+typedef void(^RequestLevelCompleteBlk)( NSMutableArray <IPDTierAdAdapter *>* _Nullable successAdapters, NSMutableArray <NSError *>*_Nullable tierFailArray);
+
+@property (nonatomic,strong)dispatch_semaphore_t semaphore;
+@property (nonatomic, strong) dispatch_queue_t semaphoreQueue;
+
+@property (nonatomic, nullable, copy) RequestLevelCompleteBlk completeBlk;
+
+@property (nonatomic, strong) NSArray <IPDAdUnitModel *>* currentTiers;
+//广告请求对象数组
+@property (nonatomic,readonly)NSMutableArray <IPDTierAdAdapter *>*adapterArray;
+
+//广告请求成功数组
+@property (nonatomic,strong)NSMutableArray <IPDTierAdAdapter *>*successAdapters;
+
+//错误信息数组
+@property (nonatomic,strong)NSMutableArray <NSError *>*tierFailArray;
+
+//倒计时器
+@property (nonatomic,strong)IPDAdCountdown *countdown;
+
+
+
+- (instancetype)initWithTiers:(NSArray <IPDAdUnitModel *>*)tiers
+                     timeoutInterval:(CGFloat)timeoutInterval
+                        showPriority:(IPDAdShowPriority)showPriority;
+
+-(void)startLoad;
+
+
+-(void)unitAdapterDidLoad:(IPDTierAdAdapter *)adapter;
+-(void)unitAdapterLoadFail:(IPDTierAdAdapter *)adapter error:(NSError *)error;
+
+@end
+
+NS_ASSUME_NONNULL_END

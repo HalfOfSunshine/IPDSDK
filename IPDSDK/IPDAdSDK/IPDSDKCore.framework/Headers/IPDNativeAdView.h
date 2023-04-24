@@ -2,11 +2,12 @@
 //  IPDNativeAdView.h
 //  IPDSDKCore
 //
-//  Created by IpdCoder on 2021/3/29.
+//  Created by Rare on 2021/3/29.
 //
 
 #import <UIKit/UIKit.h>
 #import "IPDNativeAdObject.h"
+#import "IPDAdEventReport.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @class IPDNativeAdView;

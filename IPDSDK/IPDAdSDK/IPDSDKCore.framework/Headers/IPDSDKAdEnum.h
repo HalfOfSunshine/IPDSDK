@@ -2,7 +2,7 @@
 //  IPDSDKAdEnum.h
 //  IPDSDKCore
 //
-//  Created by IpdCoder on 2021/8/16.
+//  Created by Rare on 2021/8/16.
 //
 
 #ifndef IPDSDKAdEnum_h
@@ -39,8 +39,31 @@ typedef NS_ENUM(NSInteger, IPDAdPlatformType) {
     IPDAdPlatform_WW,
     IPDAdPlatform_Google,
     IPDAdPlatform_Baidu,
+    IPDAdPlatform_Gromore,
+    IPDAdPlatform_BeiZi,
+    IPDAdPlatform_WM,
 };
 
+typedef NS_ENUM(NSInteger, IPDAdType){
+    
+    IPDAdType_Unknow                 = 0,
+    IPDAdType_SPLASH                 = 1,
+    
+    IPDAdType_REWARD                 = 3,
+    IPDAdType_H5                     = 4,
+    IPDAdType_Banner                 = 5,//banner
+    IPDAdType_Interstitial           = 6,//插屏
+    IPDAdType_ExpressFullVideoFeed   = 7,//视频流 
+    IPDAdType_ContentVideo           = 8,//视频内容 
+    IPDAdType_Native                 = 9,//原生渲染 
+    
+    IPDAdType_NativeExpress          = 11,//信息流 
+    IPDAdType_FullScreenVideo        = 12,//全屏视频
+    
+    
+    IPDAdType_News                   = 21,//新闻资讯
+    IPDAdType_WXMiniProgram          = 22
+};
 
 
 #endif /* IPDSDKAdEnum_h */

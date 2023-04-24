@@ -16,10 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface IPDCoreAdAdapter : NSObject
 
 @property(nonatomic, strong ,readonly) IPDAdUnitModel *config;
-
 ///结算价格
 @property (nonatomic, strong) NSString *secondPrice;
-
 - (instancetype)initWithAdItemConfig:(IPDAdUnitModel *)adItemConfig;
 
 
@@ -67,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 + (NSString*)getAdapterClass:(NSString *)platform adType:(NSString *)adType;
-
+-(void)reportWithEvent:(IPDEventString)event supplementMsg:(nullable NSString *)supplementMsg;
 @end
 
 NS_ASSUME_NONNULL_END

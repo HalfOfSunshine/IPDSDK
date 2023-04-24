@@ -28,13 +28,16 @@ FOUNDATION_EXPORT NSString * const IPD_ADType_MiniParam;
 
 typedef NS_ENUM(NSInteger,IPDAdShowPriority){
     IPDAdShowPriority_normal,
-    IPDAdShowPriority_weight
+    IPDAdShowPriority_weight,
+    IPDAdShowPriority_bidding
 };
 @class IPDAdUnitModel;
 @interface IPDAdUnionItemModel : NSObject
 
 @property (nonatomic, assign) IPDAdShowPriority showPriority;
 @property (nonatomic, assign) NSInteger show_genre;
+
+@property (nonatomic, assign) CGFloat timeout;
 
 @property (nonatomic, copy) NSString *pd_price;
 
@@ -91,6 +94,9 @@ typedef NS_ENUM(NSInteger,IPDAdShowPriority){
 @property (nonatomic, assign) NSInteger weight;
 ///其它参数
 @property (nonatomic, strong) NSDictionary *params;
+
+///摇一摇力度
+@property (nonatomic, strong) NSString *shake_power;
 
 @property (nonatomic, copy) NSString *type;
 

@@ -2,37 +2,38 @@
 //  IPDNativeExpressFeedAdManager.h
 //  IPDSDK
 //
-//  Created by IpdCoder on 2022/6/8.
+//  Created by Rare on 2021/1/8.
 //  Copyright © 2021 ipd. All rights reserved.
 //
 
 #import "IPDAd.h"
 #import <IPDSDKCore/IPDNativeExpressFeedAd.h>
+#import "IPDMultipleAd.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @class IPDNativeExpressFeedAdManager ,IPDNativeExpressFeedAd;
 @protocol IPDNativeExpressFeedAdManagerDelegate <NSObject>
 @optional
-///load success
-- (void)ipd_nativeExpressFeedAdManagerSuccessToLoad:(IPDNativeExpressFeedAdManager *)adsManager nativeAds:(NSArray<IPDNativeExpressFeedAd *> *_Nullable)feedAdDataArray;
+///加载成功
+- (void)IPD_nativeExpressFeedAdManagerSuccessToLoad:(IPDNativeExpressFeedAdManager *)adsManager nativeAds:(NSArray<IPDNativeExpressFeedAd *> *_Nullable)multipleResultObject;
 
-///load faile
-- (void)ipd_nativeExpressFeedAdManager:(IPDNativeExpressFeedAdManager *)adsManager didFailWithError:(NSError *_Nullable)error;
+///加载失败
+- (void)IPD_nativeExpressFeedAdManager:(IPDNativeExpressFeedAdManager *)adsManager didFailWithError:(NSError *_Nullable)error;
 
 @end
 
 
-@interface IPDNativeExpressFeedAdManager : IPDAd
+@interface IPDNativeExpressFeedAdManager : IPDMultipleAd
 
 @property (nonatomic, weak) id <IPDNativeExpressFeedAdManagerDelegate> delegate;
 
 @property (nonatomic) CGSize adSize;
 
-///video muted， default is NO
+///视频静音， 默认：NO
 @property (nonatomic) BOOL mutedIfCan;
 
 /*
- *required.
+ *required.[必选]
  * root view controller for handling ad actions.
  * 详解：开发者需传入用来弹出目标页的ViewController，一般为当前ViewController
  */

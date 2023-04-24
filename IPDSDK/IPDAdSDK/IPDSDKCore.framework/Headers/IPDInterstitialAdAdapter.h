@@ -6,12 +6,12 @@
 //
 
 
-#import <IPDSDKCore/IPDBiddingAdAdapter.h>
+#import <IPDSDKCore/IPDTierAdAdapter.h>
 #import <IPDSDKCore/IPDInterstitialAdProtocol.h>
 #import <IPDSDKCore/IPDInterstitialAdAdapterDelegate.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@interface IPDInterstitialAdAdapter : IPDBiddingAdAdapter<IPDInterstitialAdProtocol>
+@interface IPDInterstitialAdAdapter : IPDTierAdAdapter<IPDInterstitialAdProtocol>
 
 @property(nonatomic,weak) id<IPDInterstitialAdAdapterDelegate> delegate;
 

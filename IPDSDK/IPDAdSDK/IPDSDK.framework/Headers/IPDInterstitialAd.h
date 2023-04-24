@@ -2,13 +2,12 @@
 //  IPDInterstitialAd.h
 //  IPDSDK
 //
-//  Created by IpdCoder on 2022/8/1.
+//  Created by Rare on 2022/3/1.
 //  Copyright © 2022 ipd. All rights reserved.
 //
 
-#import <IPDSDK/IPDBiddingAd.h>
+#import <IPDSDK/IPDTierAd.h>
 #import <IPDSDKCore/IPDInterstitialAdProtocol.h>
-#import <IPDSDKCore/IPDInterstitialAdAdapterDelegate.h>
 #import <IPDSDKCore/IPDInterstitialAdAdapter.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -38,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface IPDInterstitialAd : IPDBiddingAd<IPDInterstitialAdProtocol,IPDInterstitialAdAdapterDelegate>
+@interface IPDInterstitialAd : IPDTierAd<IPDInterstitialAdProtocol>
 
 @property(nonatomic,weak) id<IPDInterstitialAdDelegate>delegate;
 

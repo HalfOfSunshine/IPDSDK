@@ -4,13 +4,13 @@
 //
 //  Created by Robin on 2020/12/22.
 //
-#import <IPDSDKCore/IPDBiddingAdAdapter.h>
-#import <IPDSDKCore/IPDSplashAdProtocol.h>
-#import <IPDSDKCore/IPDSplashAdAdapterDelegate.h>
 
+#import "IPDTierAdAdapter.h"
+#import "IPDSplashAdProtocol.h"
+#import "IPDSplashAdAdapterDelegate.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface IPDSplashAdAdapter : IPDBiddingAdAdapter<IPDSplashAdProtocol>
+@interface IPDSplashAdAdapter : IPDTierAdAdapter<IPDSplashAdProtocol>
 
 
 @property(nonatomic,weak) id<IPDSplashAdAdapterDelegate> delegate;
@@ -65,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)ipd_splashAdDisplayError:(NSError *)error;
 
 /// 事件上报
--(void)reportSplashAdWithEvent:(IPDEventString)event supplementMsg:(nullable NSString *)supplementMsg;
+-(void)reportWithEvent:(IPDEventString)event supplementMsg:(nullable NSString *)supplementMsg;
 
 
 /// 奖励触发

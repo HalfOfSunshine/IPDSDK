@@ -2,7 +2,7 @@
 //  IPDNativeExpressFeedAd.h
 //  IPDSDKCore
 //
-//  Created by IpdCoder on 2021/3/2.
+//  Created by Rare on 2021/3/2.
 //
 
 #import <Foundation/Foundation.h>
@@ -17,32 +17,32 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * 广告渲染成功
  */
-- (void)ipd_nativeExpressFeedAdRenderSuccess:(IPDNativeExpressFeedAd *)feedAd;
+- (void)IPD_nativeExpressFeedAdRenderSuccess:(IPDNativeExpressFeedAd *)feedAd;
 /**
  * 广告渲染失败
  */
-- (void)ipd_nativeExpressFeedAdRenderFail:(IPDNativeExpressFeedAd *)feedAd;
+- (void)IPD_nativeExpressFeedAdRenderFail:(IPDNativeExpressFeedAd *)feedAd;
 
 /**
  *广告即将展示
  */
-- (void)ipd_nativeExpressFeedAdViewWillShow:(IPDNativeExpressFeedAd *)feedAd;
+- (void)IPD_nativeExpressFeedAdViewWillShow:(IPDNativeExpressFeedAd *)feedAd;
 /**
  *广告点击
  */
-- (void)ipd_nativeExpressFeedAdDidClick:(IPDNativeExpressFeedAd *)feedAd;
+- (void)IPD_nativeExpressFeedAdDidClick:(IPDNativeExpressFeedAd *)feedAd;
 /**
  *不喜欢该广告
  */
-- (void)ipd_nativeExpressFeedAdDislike:(IPDNativeExpressFeedAd *)feedAd;
+- (void)IPD_nativeExpressFeedAdDislike:(IPDNativeExpressFeedAd *)feedAd;
 /**
  *展示落地页
  */
-- (void)ipd_nativeExpressFeedAdDidShowOtherController:(IPDNativeExpressFeedAd *)nativeAd;
+- (void)IPD_nativeExpressFeedAdDidShowOtherController:(IPDNativeExpressFeedAd *)nativeAd;
 /**
  *关闭落地页
  */
-- (void)ipd_nativeExpressFeedAdDidCloseOtherController:(IPDNativeExpressFeedAd *)nativeAd;
+- (void)IPD_nativeExpressFeedAdDidCloseOtherController:(IPDNativeExpressFeedAd *)nativeAd;
 
 @end
 
@@ -81,7 +81,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)reportErrorEvent:(nonnull NSError *)supplementError;
 
 #pragma mark - 事件上报
--(void)reportFeedAdWithEvent:(IPDEventString)event supplementMsg:(nullable NSString *)supplementMsg;
+-(void)reportWithEvent:(IPDEventString)event supplementMsg:(nullable NSString *)supplementMsg;
 @end
 
 NS_ASSUME_NONNULL_END

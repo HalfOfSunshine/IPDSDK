@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface IPDBaseContentAdapter : IPDCoreAdAdapter
 
 @property (nonatomic, strong) UIViewController *viewController;
+-(void)reportWithEvent:(IPDEventString)event supplementMsg:(nullable NSString *)supplementMsg;
 
 - (void)loadContentPageWithDeeplink:(NSString *)deepLink;
 

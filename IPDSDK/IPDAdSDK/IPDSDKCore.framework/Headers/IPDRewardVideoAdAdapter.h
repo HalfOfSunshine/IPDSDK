@@ -6,13 +6,13 @@
 //
 
 
-#import <IPDSDKCore/IPDBiddingAdAdapter.h>
+#import <IPDSDKCore/IPDTierAdAdapter.h>
 #import <IPDSDKCore/IPDRewardVideoAdProtocol.h>
 #import <IPDSDKCore/IPDRewardVideoAdAdapterDelegate.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface IPDRewardVideoAdAdapter : IPDBiddingAdAdapter<IPDRewardVideoAdProtocol>
+@interface IPDRewardVideoAdAdapter : IPDTierAdAdapter<IPDRewardVideoAdProtocol>
 
 @property(nonatomic,strong,readonly)UIView *rewardAdapterView;
 

@@ -10,6 +10,8 @@
 #import <IPDSDKCore/IPDFeedFullVideoProviderProtocol.h>
 #import <IPDSDKCore/IPDFeedFullVideoView.h>
 #import <IPDSDKCore/IPDSDKAdEnum.h>
+#import "IPDMultipleAd.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class IPDFeedFullVideoProvider;
@@ -67,7 +69,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface IPDFeedFullVideoProvider : IPDAd<IPDFeedFullVideoProviderProtocol>
+@interface IPDFeedFullVideoProvider : IPDMultipleAd<IPDFeedFullVideoProviderProtocol>
 
 @property (nonatomic, weak) id <IPDFeedFullVideoProviderDelegate> delegate;
 

@@ -36,6 +36,8 @@
 
 #pragma mark =============== IPDInterstitialAdDelegate ===============
 - (void)ipd_interstitialAdDidLoad:(IPDInterstitialAd*)ad{
+    NSArray *errors =  [self.interstitialAd getFillFailureMessages];
+    NSLog(@"插广告所有错误信息 %@",errors);
     [self.interstitialAd presentAdFromRootViewController:[UIApplication sharedApplication].keyWindow.rootViewController];
 }
 
@@ -60,6 +62,7 @@
 }
 
 - (void)ipd_interstitialAdDidFail:(IPDInterstitialAd*)ad error:(NSError * __nullable)error{
+    
 }
 
 

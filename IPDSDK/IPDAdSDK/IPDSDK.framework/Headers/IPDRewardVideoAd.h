@@ -2,11 +2,11 @@
 //  IPDRewardAd.h
 //  IPDSDK
 //
-//  Created by IpdCoder on 2022/8/1.
+//  Created by Rare on 2022/3/1.
 //  Copyright © 2022 ipd. All rights reserved.
 //
 
-#import <IPDSDK/IPDBiddingAd.h>
+#import <IPDSDK/IPDTierAd.h>
 #import <IPDSDKCore/IPDRewardVideoAdProtocol.h>
 #import <IPDSDKCore/IPDRewardVideoAdAdapter.h>
 
@@ -76,7 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-@interface IPDRewardVideoAd : IPDBiddingAd <IPDRewardVideoAdProtocol,IPDRewardVideoAdAdapterDelegate>
+@interface IPDRewardVideoAd : IPDTierAd <IPDRewardVideoAdProtocol>
 
 @property (nonatomic, weak) id <IPDRewardVideoAdDelegate> delegate;
 

@@ -2,11 +2,11 @@
 //  IPDSplashAd.h
 //  IPDSDK
 //
-//  Created by IpdCoder on 2022/8/11.
+//  Created by Rare on 2022/2/28.
 //  Copyright © 2022 ipd. All rights reserved.
 //
 
-#import <IPDSDK/IPDBiddingAd.h>
+#import <IPDSDK/IPDTierAd.h>
 #import <IPDSDKCore/IPDSplashAdProtocol.h>
 #import <IPDSDKCore/IPDSplashAdAdapter.h>
 NS_ASSUME_NONNULL_BEGIN
@@ -61,14 +61,14 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)ipd_splashAdDisplayError:(IPDSplashAd *)splashAd withError:(NSError *)error;
 
 /// 奖励触发
-- (void)ipd_splashAdAdapterDidRewardEffective:(IPDSplashAd *)splashAd withInfo:(nullable NSDictionary *)info;
+- (void)ipd_splashAdDidRewardEffective:(IPDSplashAd *)splashAd withInfo:(nullable NSDictionary *)info;
 @end
 
 
-@interface IPDSplashAd : IPDBiddingAd<IPDSplashAdProtocol,IPDSplashAdAdapterDelegate>
+@interface IPDSplashAd : IPDTierAd<IPDSplashAdProtocol>
 
 @property (nonatomic, weak) id <IPDSplashAdDelegate> delegate;
-@property (nonatomic,strong,nullable)IPDSplashAdAdapter *currentAdapter;
+@property (nonatomic, strong,nullable) IPDSplashAdAdapter *currentAdapter;
 
 @end
 

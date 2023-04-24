@@ -5,7 +5,7 @@
 //  Created by IpdCoder on 2021/4/27.
 //
 
-#import <IPDSDKCore/IPDBiddingAdAdapter.h>
+#import <IPDSDKCore/IPDTierAdAdapter.h>
 #import <UIKit/UIKit.h>
 #import "IPDSDKAdEnum.h"
 NS_ASSUME_NONNULL_BEGIN
@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-@interface IPDFullScreenVideoAdAdapter : IPDBiddingAdAdapter
+@interface IPDFullScreenVideoAdAdapter : IPDTierAdAdapter
 
 
 @property(nonatomic,weak) id<IPDfullScreenVideoAdAdapterDelegate> delegate;

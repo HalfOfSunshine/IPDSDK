@@ -20,7 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 //H5Ad错误
 -(void) onIPDH5PageError:(IPDUser*)user error:(NSError*) error;
 
-
+//H5Ad关闭
+-(void) onIPDH5PageWillClose:(IPDUser*)user;
 
 //H5操作回调
 //积分不足

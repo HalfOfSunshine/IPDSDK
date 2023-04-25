@@ -3,8 +3,43 @@
 #platform :ios, '10.0'
 
 target 'IPDSDK_Example' do
-  pod 'IPDSDK'#, :path => '../'
-#  pod 'IPDSDK/IPDSDKModuleGoogle', :path => '../'
+  ##mark 1，直接导入方式,一般打开此注释即可
+     pod 'IPDSDK'#, :path => '../'
+     
+     
+  ##mark 2 本地视频内容引入方式。另外还需要将IPDSDKModuleKS.a静态库拖进项目里
+     #pod 'IPDSDK/IPDSDKModuleDSP'#依赖库，引入任何模块都需要依赖此模块，默认引入
+     #pod 'IPDSDK/IPDSDKModuleGDT'#优量汇广告
+     #pod 'IPDSDK/IPDSDKModuleCSJ'#穿山甲广告
+     #pod 'IPDContentVideo', :path => '../IPDSDK/IPDSDKModuleKS'
+     #pod 'IPDSDK/IPDSDKModuleMTG'#MTG广告
+     #pod 'IPDSDK/IPDSDKModuleSIG'#Sigmob广告
+     #pod 'IPDSDK/IPDSDKModuleBD'#百度广告
+    
+  ##mark 3，分模块导入方式
+    #pod 'IPDSDK/IPDSDKModuleDSP'#依赖库，引入任何模块都需要依赖此模块，默认引入
+    #pod 'IPDSDK/IPDSDKModuleGDT'#优量汇广告
+    #pod 'IPDSDK/IPDSDKModuleCSJ'#穿山甲广告
+    #pod 'IPDSDK/IPDSDKModuleKS'#快手广告
+    #pod 'IPDSDK/IPDSDKModuleMTG'#MTG广告
+    #pod 'IPDSDK/IPDSDKModuleSIG'#Sigmob广告
+    #pod 'IPDSDK/IPDSDKModuleBD'#百度广告
+    
+  ##mark 4，默认不引入的广告模块
+    #pod 'IPDSDK/IPDSDKModuleYM'#云码广告
+    #pod 'IPDSDK/IPDSDKModuleGoogle'#Google广告
+    
+    
+    
+    
+  ##mark 5，引入聚合广告模块 聚合 注意，聚合只能够引入一个，否则会引起一些联盟重复初始化的问题
+    #pod 'IPDSDK/IPDSDKModuleDSP'    #依赖库，引入任何模块都需要依赖此模块，默认引入
+    
+    ##聚合引入多个会引起一些联盟重复初始化的问题
+    #pod 'IPDSDK/IPDSDKModuleGromore'#穿山甲Gromore广告
+    #pod 'IPDSDK/IPDSDKModuleBeiZi'  #倍孜广告
+    #pod 'IPDSDK/IPDSDKModuleWM'     #Sigmob to-bid广告
+
   target 'IPDSDK_Tests' do
     inherit! :search_paths
 

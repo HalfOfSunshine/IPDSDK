@@ -43,6 +43,7 @@ typedef void(^MultipleRequestLevelCompleteBlk)( NSMutableArray <IPDMultipleAdAda
 //倒计时器
 @property (nonatomic,strong)IPDAdCountdown *countdown;
 
+@property (nonatomic, assign) long timeout;
 
 
 - (instancetype)initWithTiers:(NSArray <IPDAdUnitModel *>*)tiers

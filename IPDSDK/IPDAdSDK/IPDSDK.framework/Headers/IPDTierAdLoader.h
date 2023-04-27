@@ -14,9 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @required
 -(IPDTierAdAdapter *)createTierAdapterForUnit:(IPDAdUnitModel *)unit;
-@optional
-
-- (NSInteger)getCountDownInterval;
 @end
 
 @interface IPDTierAdLoader : NSObject <IPDTierProtocol>
@@ -40,6 +37,8 @@ typedef void(^RequestLevelCompleteBlk)( NSMutableArray <IPDTierAdAdapter *>* _Nu
 
 //倒计时器
 @property (nonatomic,strong)IPDAdCountdown *countdown;
+
+@property (nonatomic, assign) long timeout;
 
 
 

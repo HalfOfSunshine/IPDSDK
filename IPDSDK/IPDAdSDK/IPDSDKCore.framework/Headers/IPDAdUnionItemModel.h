@@ -37,7 +37,7 @@ typedef NS_ENUM(NSInteger,IPDAdShowPriority){
 @property (nonatomic, assign) IPDAdShowPriority showPriority;
 @property (nonatomic, assign) NSInteger show_genre;
 
-@property (nonatomic, assign) CGFloat timeout;
+@property (nonatomic, assign) long timeout;
 
 @property (nonatomic, copy) NSString *pd_price;
 

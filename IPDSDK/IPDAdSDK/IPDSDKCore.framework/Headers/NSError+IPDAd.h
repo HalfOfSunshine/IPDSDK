@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger,IPDErrorCodeAd){
     
     
     IPDErrorCodeAd_WXLibrarieMissed = 100403,
-    IPDErrorCodeAd_WXLibrarieRegiestFail = 100404,
+    IPDErrorCodeAd_WXLibrarieRegistFail = 100404,
     IPDErrorCodeAd_WXNotResponseImp = 100405,
 };
 

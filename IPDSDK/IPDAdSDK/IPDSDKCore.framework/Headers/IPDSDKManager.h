@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) IPDAdSDKLogLevel level;
 
+//是否可以获取ecpm
+@property (nonatomic, assign) BOOL can_read_ecpm;
 
 - (void)registerPlatform:(NSString *)platform;
 

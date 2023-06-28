@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @required
 -(IPDTierAdAdapter *)createTierAdapterForUnit:(IPDAdUnitModel *)unit;
+-(void)setCacheAdapter:(IPDTierAdAdapter *)cacheAdapter;
 @end
 
 @interface IPDTierAdLoader : NSObject <IPDTierProtocol>

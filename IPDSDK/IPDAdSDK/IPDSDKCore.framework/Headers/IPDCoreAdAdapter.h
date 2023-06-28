@@ -11,6 +11,8 @@
 #import <IPDSDKCore/IPDAdDebugLog.h>
 #import <IPDSDKCore/IPDBiddingLossRelease.h>
 #import <IPDSDKCore/IPDAdEventReport.h>
+#import <IPDSDKCore/IPDSDKManager.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface IPDCoreAdAdapter : NSObject
@@ -18,6 +20,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong ,readonly) IPDAdUnitModel *config;
 ///结算价格
 @property (nonatomic, strong) NSString *secondPrice;
+@property (nonatomic, strong) NSString *cacheTime;
+
+
+/// 平台判断广告是否已过期（如有）
+- (BOOL)pmAdValid;
+
 - (instancetype)initWithAdItemConfig:(IPDAdUnitModel *)adItemConfig;
 
 

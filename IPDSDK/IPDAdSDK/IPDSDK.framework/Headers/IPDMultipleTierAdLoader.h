@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @required
 -(IPDMultipleAdAdapter *)createTierAdapterForUnit:(IPDAdUnitModel *)unit;
+- (void)setCacheAdapter:(IPDMultipleAdAdapter *)adapter;
 @optional
 
 - (NSInteger)getCountDownInterval;
@@ -49,7 +50,6 @@ typedef void(^MultipleRequestLevelCompleteBlk)( NSMutableArray <IPDMultipleAdAda
 - (instancetype)initWithTiers:(NSArray <IPDAdUnitModel *>*)tiers
                      timeoutInterval:(CGFloat)timeoutInterval
                         showPriority:(IPDAdShowPriority)showPriority;
-
 -(void)startLoadWithCount:(NSUInteger)count;
 
 -(void)unitAdapterDidLoad:(IPDMultipleAdAdapter *)adapter resultArray:(NSArray *)resultArray;

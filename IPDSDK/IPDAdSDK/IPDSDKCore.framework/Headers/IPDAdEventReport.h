@@ -26,7 +26,7 @@ FOUNDATION_EXPORT NSString * const IPDEvent_Other;//其他信息
 //事件上报
 + (nullable NSURLSessionTask *)reportEventWithIpdad_id:(NSString *)Ipdad_id adType:(IPDAdType)adType event:(IPDEventString)event unionType:(NSString *)unionType ipd_pm_id:(NSString *)Ipd_pm_id supplementMsg:(NSString * _Nullable )supplementMsg otherDic:(NSDictionary * _Nullable)otherDic callback:(void(^)(_Nullable id responseObject, NSError * _Nullable error))callback;
 
-
++ (nullable NSURLSessionTask *)reportAppInitWithCallback:(nullable void(^)(_Nullable id responseObject, NSError * _Nullable error))callback;
 
 + (NSString *)getTimestampSince1970;
 

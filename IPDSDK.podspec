@@ -61,7 +61,17 @@ TODO: Add long description of the pod here.
   s.subspec 'IPDSDKModuleCSJ' do |ss|
     ss.vendored_libraries = 'IPDSDK/IPDSDKModuleCSJ/*.a'
     ss.dependency 'IPDSDK/IPDAdSDK'
-    ss.dependency 'Ads-CN', '~> 5.1'
+    ss.dependency 'Ads-Fusion-CN-Beta', '~> 5.8'
+    ss.dependency 'Ads-Fusion-CN-Beta/CSJMediation'
+    ss.dependency 'Ads-Fusion-CN-Beta/BUAdSDK'
+    ss.dependency 'CSJMAdmobAdapter', '~> 10.0'
+    ss.dependency 'CSJMBaiduAdapter', '~> 5.0'
+    ss.dependency 'CSJMGdtAdapter', '~> 4.14'
+#    ss.dependency 'CSJMKlevinAdapter', '~> 2.11'
+    ss.dependency 'CSJMKsAdapter', '~> 3.3'
+    ss.dependency 'CSJMMintegralAdapter', '~> 7.3.4'
+    ss.dependency 'CSJMSigmobAdapter', '~> 4.8'
+#    ss.dependency 'CSJMUnityAdapter', '~> 4.3'
   end
 
   s.subspec 'IPDSDKModuleKS' do |ss|

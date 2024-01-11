@@ -106,14 +106,14 @@ TODO: Add long description of the pod here.
     ss.dependency 'SigmobAd-iOS', '~> 4.7'
 #   sig更新日志要找运营看，或者自己注册一个账号看一下
   end
-
-  s.subspec 'IPDSDKModuleYM' do |ss|
-    ss.vendored_libraries = 'IPDSDK/IPDSDKModuleYM/*.a'
-    ss.dependency 'IPDSDK/IPDAdSDK'
-    ss.vendored_frameworks = 'IPDSDK/IPDSDKModuleYM/*.framework'
-    ss.preserve_paths = 'IPDSDK/IPDSDKModuleYM/*.framework'
-    ss.resources = 'IPDSDK/IPDSDKModuleYM/AlicloudCloudCode.framework/AlicloudCloudCode.bundle'
-  end
+#
+#  s.subspec 'IPDSDKModuleYM' do |ss|
+#    ss.vendored_libraries = 'IPDSDK/IPDSDKModuleYM/*.a'
+#    ss.dependency 'IPDSDK/IPDAdSDK'
+#    ss.vendored_frameworks = 'IPDSDK/IPDSDKModuleYM/*.framework'
+#    ss.preserve_paths = 'IPDSDK/IPDSDKModuleYM/*.framework'
+#    ss.resources = 'IPDSDK/IPDSDKModuleYM/AlicloudCloudCode.framework/AlicloudCloudCode.bundle'
+#  end
   
   s.subspec 'IPDSDKModuleGoogle' do |ss|
     ss.vendored_libraries = 'IPDSDK/IPDSDKModuleGoogle/*.a'

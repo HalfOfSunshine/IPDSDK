@@ -13,7 +13,7 @@
 //ipd_20201014iOSDEMO
 
 - (void)setupIPDSDK{
-    [IPDAdSDK setAppID:IPD_Appid];
+    [IPDAdSDK setAppID:Appid];
     [IPDAdSDK setLogLevel:IPDAdSDKLogLevelDebug];
     NSString *version = [IPDAdSDK SDKVersion];
     NSLog(@"IPDSDK version：%@",version);

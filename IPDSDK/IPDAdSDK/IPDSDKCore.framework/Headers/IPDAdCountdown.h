@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger,IPDCountdownState){
     IPDCountdownStateNone  = 0,
     IPDCountdownStatePaused,
+    IPDCountdownStateResumed,
     IPDCountdownStateRunning,
     IPDCountdownStateEnded,
 };
@@ -34,6 +35,8 @@ typedef void(^IPDCountdownCallBack) (long remainSec, IPDCountdownState state);
 -(void)startCountdown;
 ///暂停倒计时
 -(void)pauseCountdown;
+///继续倒计时
+-(void)resumeCountdown;
 ///重新开始倒计时
 -(void)reStartCountdown;
 ///结束倒计时

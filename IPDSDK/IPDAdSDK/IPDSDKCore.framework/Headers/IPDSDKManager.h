@@ -2,7 +2,7 @@
 //  IPDSDKManager.h
 //  IPDSDKCore
 //
-//  Created by IpdCoder on 2022/2/22.
+//  Created by Rare on 2022/2/22.
 //
 
 #import <Foundation/Foundation.h>
@@ -25,6 +25,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 //是否可以获取ecpm
 @property (nonatomic, assign) BOOL can_read_ecpm;
+
+//是否永久断开配置更新
+@property (nonatomic, assign) BOOL is_disconnect;
+
+//是否跳过单个广告位配置请求，直接使用本地配置
+@property (nonatomic, assign) BOOL is_skip_pos_conf_req;
 
 - (void)registerPlatform:(NSString *)platform;
 

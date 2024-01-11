@@ -171,7 +171,7 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6F564BD2A94126A78266A1F3 /* IPDSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = IPDSDK.podspec; path = ../IPDSDK.podspec; sourceTree = "<group>"; };
+		6F564BD2A94126A78266A1F3 /* IPDSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = IPDSDK.podspec; path = ../IPDSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9208E04BDAFE8A4EEACD4A80 /* Pods-IPDSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IPDSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-IPDSDK_Tests/Pods-IPDSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4CAF7E319868ECCDAD4063B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -1019,15 +1019,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-IPDSDK_Example/Pods-IPDSDK_Example-resources.sh",
-				"${PODS_ROOT}/Ads-CN/SDK/CSJAdSDK.bundle",
+				"${PODS_ROOT}/Ads-Fusion-CN-Beta/SDK/CSJAdSDK.bundle",
 				"${PODS_ROOT}/BaiduMobAdSDK/baidumobadsdk.bundle",
-				"${PODS_ROOT}/../../IPDSDK/IPDSDKModuleDSP/IPDSDKBundle.bundle",
+				"${PODS_ROOT}/DSPSDK/DSPSDKS/DSPBundle.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CSJAdSDK.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/baidumobadsdk.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IPDSDKBundle.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DSPBundle.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

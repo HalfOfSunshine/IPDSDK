@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface IPDAdSDK : NSObject
 
 /**
-Register the App ID that’s already been applied before requesting an ad from TikTok Audience Network.
+Register the App ID
 @param appID : the unique identifier of the App
 */
 + (void)setAppID:(NSString *)appID;

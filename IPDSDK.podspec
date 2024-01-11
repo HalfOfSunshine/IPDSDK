@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IPDSDK'
-  s.version          = '1.0.3.12'
+  s.version          = '2.0.0'
   s.summary          = 'IPDSDK广告'
 
 # This description is used to generate tags and improve search results.
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
-
+ 
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
                        DESC
@@ -43,7 +43,7 @@ TODO: Add long description of the pod here.
 #    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
 #  }
 #  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.default_subspecs = 'IPDSDKModuleGDT', 'IPDSDKModuleCSJ', 'IPDSDKModuleKS', 'IPDSDKModuleMTG', 'IPDSDKModuleDSP','IPDSDKModuleSIG','IPDSDKModuleBD'
+  s.default_subspecs = 'IPDSDKModuleGDT', 'IPDSDKModuleCSJ', 'IPDSDKModuleKS', 'IPDSDKModuleMTG', 'IPDSDKModuleDSP','IPDSDKModuleSIG','IPDSDKModuleBD','IPDSDKModuleBeiZi'
 
   s.subspec 'IPDAdSDK' do |ss|
     ss.vendored_frameworks = 'IPDSDK/IPDAdSDK/*.framework'
@@ -53,7 +53,7 @@ TODO: Add long description of the pod here.
   s.subspec 'IPDSDKModuleGDT' do |ss|
     ss.vendored_libraries = 'IPDSDK/IPDSDKModuleGDT/*.a'
     ss.dependency 'IPDSDK/IPDAdSDK'
-    ss.dependency 'GDTMobSDK', '~> 4.14'
+    ss.dependency 'GDTMobSDK', '>= 4.14.62'
 #    4.13.51 bidding竞败上报方法sendLossNotificationWithPrice，4.13.81为sendLossNotificationWithPrice
 #   固定到4.13可能会导致crash
   end
@@ -96,8 +96,8 @@ TODO: Add long description of the pod here.
 
   s.subspec 'IPDSDKModuleDSP' do |ss|
     ss.vendored_libraries = 'IPDSDK/IPDSDKModuleDSP/*.a'
-    ss.resource = 'IPDSDK/IPDSDKModuleDSP/*.bundle'
     ss.dependency 'IPDSDK/IPDAdSDK'
+    ss.dependency 'DSPSDK'
   end
   
   s.subspec 'IPDSDKModuleSIG' do |ss|
@@ -125,34 +125,20 @@ TODO: Add long description of the pod here.
  s.subspec 'IPDSDKModuleBD' do |ss|
    ss.vendored_libraries = 'IPDSDK/IPDSDKModuleBD/*.a'
    ss.dependency 'IPDSDK/IPDAdSDK'
-   ss.dependency 'BaiduMobAdSDK', '~> 4.81'
+   ss.dependency 'BaiduMobAdSDK', '~> 5.32'
 #  bidding要求 IOS V4.81及以上版本
  end
  
-  s.subspec 'IPDSDKModuleGromore' do |ss|
-   ss.vendored_libraries = 'IPDSDK/IPDSDKModuleGromore/*.a'
+ s.subspec 'IPDSDKModulePangle' do |ss|
+   ss.vendored_libraries = 'IPDSDK/IPDSDKModulePangle/*.a'
    ss.dependency 'IPDSDK/IPDAdSDK'
-   ss.vendored_frameworks = 'IPDSDK/IPDSDKModuleGromore/**/*.framework'
-   ss.preserve_paths = 'IPDSDK/IPDSDKModuleGromore/**/*.framework'
-   ss.dependency 'Ads-CN', '~> 5.1'
-   ss.dependency 'Google-Mobile-Ads-SDK' , '10.0.0'
-   ss.dependency 'GDTMobSDK', '4.14.10'
-   ss.dependency 'BaiduMobAdSDK', '5.11'
-               
-    ss.dependency 'MintegralAdSDK', '7.2.8'
-    ss.dependency 'MintegralAdSDK/RewardVideoAd'
-    ss.dependency 'MintegralAdSDK/BannerAd'
-    ss.dependency 'MintegralAdSDK/SplashAd'
-    ss.dependency 'MintegralAdSDK/InterstitialAd'
-    ss.dependency 'MintegralAdSDK/NativeAdvancedAd'
-
-    ss.dependency 'KSAdSDK', '~>3.3.38'
+   ss.dependency 'Ads-Global'
  end
  
  s.subspec 'IPDSDKModuleBeiZi' do |ss|
    ss.vendored_libraries = 'IPDSDK/IPDSDKModuleBeiZi/*.a'
    ss.dependency 'IPDSDK/IPDAdSDK'
-   ss.dependency 'BeiZiSDK', '4.90.1.26'
+   ss.dependency 'BeiZiSDK-iOS/BeiZiSDK-iOS', '~>4.90'
  end
  
   s.subspec 'IPDSDKModuleWM' do |ss|

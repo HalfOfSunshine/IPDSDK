@@ -6,6 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <IPDSDKCore/NSNull+IPDExtension.h>
+#import <IPDSDKCore/NSNumber+IPDExtension.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

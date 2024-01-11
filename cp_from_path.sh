@@ -1,4 +1,4 @@
-SOURCE_DIR="/Users/mamingkang/Desktop/IPDSDK-iOS"
+SOURCE_DIR="/Users/mamingkang/ZJSDK_workPace/IPDSDK-iOS"
 TARGET_DIR="$(pwd)/IPDSDK"
 # if [ -n $1 ]
 # then
@@ -20,8 +20,9 @@ then
     cp -r $SOURCE_DIR/IPDSDKModuleKS/IPDSDKModuleKS_Products/libIPDSDKModuleKS.a                                IPDSDK/IPDSDKModuleKS
     cp -r $SOURCE_DIR/IPDSDKModuleMTG/IPDSDKModuleMTG_Products/libIPDSDKModuleMTG.a                             IPDSDK/IPDSDKModuleMTG
     cp -r $SOURCE_DIR/IPDSDKModuleSIG/IPDSDKModuleSIG_Products/libIPDSDKModuleSIG.a                             IPDSDK/IPDSDKModuleSIG
+    cp -r $SOURCE_DIR/IPDSDKModulePangle/IPDSDKModulePangle_Products/libIPDSDKModulePangle.a                    IPDSDK/IPDSDKModulePangle
+    cp -r $SOURCE_DIR/IPDSDKModulePangle/IPDSDKModulePangle_Products/IPDSDKModulePangle/IPDSDKModulePangle.h    IPDSDK/IPDSDKModulePangle
     cp -r $SOURCE_DIR/IPDSDKModuleYM/IPDSDKModuleYM_Products/libIPDSDKModuleYM.a                                IPDSDK/IPDSDKModuleYM
-    cp -r $SOURCE_DIR/IPDSDKModuleGromore/IPDSDKModuleGromore_Products/libIPDSDKModuleGromore.a                 IPDSDK/IPDSDKModuleGromore
     cp -r $SOURCE_DIR/IPDSDKModuleBeiZi/IPDSDKModuleBeiZi_Products/libIPDSDKModuleBeiZi.a                       IPDSDK/IPDSDKModuleBeiZi
     cp -r $SOURCE_DIR/IPDSDKModuleWM/IPDSDKModuleWM_Products/libIPDSDKModuleWM.a                                IPDSDK/IPDSDKModuleWM
 else

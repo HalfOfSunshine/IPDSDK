@@ -20,7 +20,8 @@ IPDContentAdapterStateProtocol,
 IPDAdapterContentAdapterVideoStateProtocol
 >
 
-
+/// 任务完成回调
+- (void)ipdAdapter_contentTaskComplete:(id<IPDContentInfo>)content;
 ///  视频状态代理
 @property (nonatomic, weak) id <IPDAdapterContentAdapterVideoStateDelegate> ipdAdapter_videoStateDelegate;
 ///  页面状态代理

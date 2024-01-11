@@ -67,7 +67,8 @@ NS_ASSUME_NONNULL_BEGIN
 */
 - (void)ipdAdapter_contentDidResume:(id<IPDContentInfo>)content;
 
-
+/// 任务完成回调
+- (void)ipdAdapter_contentTaskComplete:(id<IPDContentInfo>)content;
 @end
 
 NS_ASSUME_NONNULL_END

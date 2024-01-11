@@ -68,5 +68,5 @@ FOUNDATION_EXPORT UIViewController * ipd_getCurrentVCFrom(UIViewController *vc);
 
 FOUNDATION_EXPORT NSString * const IPDSDKVersion;
 
-
+FOUNDATION_EXPORT NSNumber * getIPDSDKPlugVer (void);
 #endif /* IPDSDKDefines_h */

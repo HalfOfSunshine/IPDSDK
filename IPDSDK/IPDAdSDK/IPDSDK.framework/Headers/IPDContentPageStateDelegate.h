@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <IPDSDKCore/IPDContentInfo.h>
+#import <IPDSDKCore/IPDContentAdapterStateDelegate.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -68,7 +69,8 @@ NS_ASSUME_NONNULL_BEGIN
 */
 - (void)ipd_contentDidResume:(id<IPDContentInfo>)content;
 
-
+/// 任务完成回调
+- (void)ipdAdapter_contentTaskComplete:(id<IPDContentInfo>)content;
 @end
 
 

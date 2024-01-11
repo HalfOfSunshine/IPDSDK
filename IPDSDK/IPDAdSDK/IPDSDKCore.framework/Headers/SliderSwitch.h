@@ -67,6 +67,7 @@
 @property(nonatomic,strong) UIView <SliderSwitchProtocol>*  selectedPageView;
 /*! 容器ScrollView*/
 @property(nonatomic,weak) UIScrollView *containerScroll;
+
 /**
  *可见中心偏移量 ，滑动停止后SliderSwitch中心按钮 悬停位置的偏移量
  
@@ -86,6 +87,8 @@
 @property(nonatomic,assign) CGFloat sliderOffset DEPRECATED_MSG_ATTRIBUTE("考虑以后可能的情形预定义属性，功能未实现");
 /** 是否首次加载 */
 @property(nonatomic) BOOL isFirstSlide;
+///页面宽度，默认屏
+@property (nonatomic, assign) CGFloat pageWidth;
 ///选中时Y轴偏移量 默认为-1
 @property (nonatomic, assign) CGFloat Ytranform;
 

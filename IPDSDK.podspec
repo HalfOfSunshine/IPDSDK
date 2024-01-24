@@ -78,7 +78,7 @@ TODO: Add long description of the pod here.
     ss.vendored_libraries = 'IPDSDK/IPDSDKModuleKS/*.a'
     ss.dependency 'IPDSDK/IPDAdSDK'
 #    ss.vendored_frameworks = 'IPDSDK/IPDSDKModuleKS/KSAdSDK.framework'
-    ss.dependency 'KSAdSDK', '~> 3.3.6'
+    ss.dependency 'KSAdSDK', '3.3.55'
 #    bidding广告 3.3.6 以上，内容 3.3.10 以上 sdk 版本
   end
 

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IPDSDK'
-  s.version          = '2.0.0.3'
+  s.version          = '2.0.0.3.1'
   s.summary          = 'IPDSDK广告'
 
 # This description is used to generate tags and improve search results.
@@ -78,7 +78,7 @@ TODO: Add long description of the pod here.
     ss.vendored_libraries = 'IPDSDK/IPDSDKModuleKS/*.a'
     ss.dependency 'IPDSDK/IPDAdSDK'
 #    ss.vendored_frameworks = 'IPDSDK/IPDSDKModuleKS/KSAdSDK.framework'
-    ss.dependency 'KSAdSDK', '3.3.55'
+    ss.dependency 'KSAdSDK', '~> 3.3.6'
 #    bidding广告 3.3.6 以上，内容 3.3.10 以上 sdk 版本
   end
 

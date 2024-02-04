@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @required
 -(void)dealSuccessResult;
 -(void)dealFailResultWithError:(NSError*)error;
--(IPDMultipleTierAdLoader *)createTierLoader:(NSArray <IPDAdUnitModel *>*)tiers;
+-(IPDMultipleTierAdLoader *)createTierLoader:(NSArray <IPDAdUnitModel *>*)tiers showPriority:(IPDAdShowPriority)showPriority;
 
 @optional
 - (NSInteger)getCountDownInterval;

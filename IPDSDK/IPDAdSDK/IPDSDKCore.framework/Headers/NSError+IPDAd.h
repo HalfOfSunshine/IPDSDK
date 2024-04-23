@@ -31,6 +31,7 @@ typedef NS_ENUM(NSInteger,IPDErrorCodeAd){
     
     IPDErrorCodeAd_MissParameter = 100601,
 
+    IPDErrorCodeAd_AdInvalid = 100602,
 };
 
 

@@ -8,9 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IPDSDK'
-  s.version          = '2.0.0.5'
+  s.version          = '2.0.1.0'
   s.summary          = 'IPDSDK广告'
-
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
@@ -43,7 +42,7 @@ TODO: Add long description of the pod here.
 #    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
 #  }
 #  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.default_subspecs = 'IPDSDKModuleGDT', 'IPDSDKModuleCSJ', 'IPDSDKModuleKS', 'IPDSDKModuleMTG', 'IPDSDKModuleDSP','IPDSDKModuleSIG','IPDSDKModuleBD','IPDSDKModuleBeiZi'
+  s.default_subspecs = 'IPDSDKModuleGDT', 'IPDSDKModuleCSJ', 'IPDSDKModuleKS', 'IPDSDKModuleMTG', 'IPDSDKModuleDSP','IPDSDKModuleSIG','IPDSDKModuleBD','IPDSDKModuleBeiZi','ZJSDKModuleTanX'
 
   s.subspec 'IPDAdSDK' do |ss|
     ss.vendored_frameworks = 'IPDSDK/IPDAdSDK/*.framework'
@@ -54,6 +53,7 @@ TODO: Add long description of the pod here.
     ss.vendored_libraries = 'IPDSDK/IPDSDKModuleGDT/*.a'
     ss.dependency 'IPDSDK/IPDAdSDK'
     ss.dependency 'GDTMobSDK', '>= 4.14.62'
+#    4.14.6开始旧的注册方法标记为废弃，新的注册方法可以调用到
 #    4.13.51 bidding竞败上报方法sendLossNotificationWithPrice，4.13.81为sendLossNotificationWithPrice
 #   固定到4.13可能会导致crash
   end
@@ -73,7 +73,6 @@ TODO: Add long description of the pod here.
     ss.dependency 'CSJMSigmobAdapter', '~> 4.8'
 #    ss.dependency 'CSJMUnityAdapter', '~> 4.3'
   end
-
   s.subspec 'IPDSDKModuleKS' do |ss|
     ss.vendored_libraries = 'IPDSDK/IPDSDKModuleKS/*.a'
     ss.dependency 'IPDSDK/IPDAdSDK'
@@ -159,5 +158,20 @@ TODO: Add long description of the pod here.
     ss.dependency 'GDTMobSDK', '4.14.10'
     ss.dependency 'Ads-CN', '5.0.0.5'
  end
- 
+  s.subspec 'ZJSDKModuleTanX' do |ss|
+
+   ss.vendored_libraries = 'ZJSDK/ZJSDKModuleTanX/*.a'
+   ss.dependency 'ZJSDK/ZJAdSDK'
+   ss.source_files         = 'ZJSDK/ZJSDKModuleTanX/*.h'
+   ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleTanX/*.framework'
+   ss.resource             = 'ZJSDK/ZJSDKModuleTanX/*.bundle'
+   ss.preserve_paths       = 'ZJSDK/ZJSDKModuleTanX/*.framework'
+
+   # ss.dependency 'MintegralAdSDK/RewardVideoAd'
+   # ss.dependency 'MintegralAdSDK/BannerAd'
+   # ss.dependency 'MintegralAdSDK/SplashAd'
+   # ss.dependency 'MintegralAdSDK/InterstitialAd'
+   # ss.dependency 'MintegralAdSDK/NativeAdvancedAd'
+ end
 end
+

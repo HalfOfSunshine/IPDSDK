@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)ipd_rewardVideoAdAdapterDidRewardEffective:(IPDRewardVideoAdAdapter *)adapter;
 
+- (void)ipd_rewardVideoAdAdapter:(IPDRewardVideoAdAdapter *)adapter serviceCheckResult:(BOOL)success error:(NSError *)error;
+
 - (void)ipd_rewardVideoAdAdapterDidPlayFinish:(IPDRewardVideoAdAdapter *)adapter;
 
 - (void)ipd_rewardVideoAdAdapter:(IPDRewardVideoAdAdapter *)adapter displayFailWithError:(NSError *)error;

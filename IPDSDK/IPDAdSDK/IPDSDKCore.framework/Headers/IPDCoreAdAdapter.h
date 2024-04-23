@@ -12,7 +12,7 @@
 #import <IPDSDKCore/IPDBiddingLossRelease.h>
 #import <IPDSDKCore/IPDAdEventReport.h>
 #import <IPDSDKCore/IPDSDKManager.h>
-
+#import <IPDSDKCore/IPDBiddingReportModel.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface IPDCoreAdAdapter : NSObject
@@ -59,6 +59,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)biddingSuccess:(NSInteger )secondPrice;
 
 
+/// 竞价上报，提供更多信息
+/// @param model 上报内容model
+- (void)biddingSuccessModel:(IPDBiddingReportModel *)model;
+
+/// 竞价上报，提供更多信息
+/// @param model 上报内容model
+- (void)biddingLossModel:(IPDBiddingReportModel *)model;
 /**
  *  竞败之后或未参竞调用
  *  @param price - 本次竞胜方出价（单位：分），必填

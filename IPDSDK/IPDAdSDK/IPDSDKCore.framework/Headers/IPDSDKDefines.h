@@ -27,12 +27,8 @@ statusBarHeight = [UIApplication sharedApplication].statusBarFrame.size.height;\
 #define IPD_IPHONEXSeries ipd_is_iphoneXSeries_screen()
 
 #define IPD_DefaultNavigationBarHeight \
-({CGFloat navigationBarHeight = 44; \
-if (IPD_IPHONEXSeries)  { \
-navigationBarHeight = 44+IPD_SafeAreaInsetsTop; \
-}else{ \
-navigationBarHeight = 44+IPD_StatusBarHeight; \
-} \
+({CGFloat navigationBarHeight = self.navigationController.navigationBar.frame.size.height; \
+navigationBarHeight = navigationBarHeight+IPD_StatusBarHeight; \
 (navigationBarHeight);})
 
 #define IPD_SafeAreaInsetsBottom \

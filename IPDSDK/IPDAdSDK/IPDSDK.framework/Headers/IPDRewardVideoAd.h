@@ -59,6 +59,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)ipd_rewardVideoAdDidPlayFinish:(IPDRewardVideoAd *)rewardedVideoAd;
 
+
+/// 正常情况不需要此方法，请不要使用此方法作为判断依据
+/// @param rewardedVideoAd 激励广告
+/// @param success 是否成功
+/// @param error 错误信息
+- (void)ipd_rewardVideoAd:(IPDRewardVideoAd *)rewardedVideoAd serviceCheckResult:(BOOL)success error:(NSError *)error;
 /**
  视频广告加载错误信息回调
  @param rewardedVideoAd IPDRewardVideoAd 实例

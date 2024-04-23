@@ -42,7 +42,8 @@ typedef NS_ENUM(NSInteger, IPDAdPlatformType) {
     IPDAdPlatform_Gromore,
     IPDAdPlatform_BeiZi,
     IPDAdPlatform_WM,
-    ZJAdPlatform_Pangle,
+    IPDAdPlatform_Pangle,
+    IPDAdPlatform_TANX,
 };
 
 typedef NS_ENUM(NSInteger, IPDAdType){

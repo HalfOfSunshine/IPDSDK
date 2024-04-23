@@ -42,7 +42,7 @@ TODO: Add long description of the pod here.
 #    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
 #  }
 #  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.default_subspecs = 'IPDSDKModuleGDT', 'IPDSDKModuleCSJ', 'IPDSDKModuleKS', 'IPDSDKModuleMTG', 'IPDSDKModuleDSP','IPDSDKModuleSIG','IPDSDKModuleBD','IPDSDKModuleBeiZi','ZJSDKModuleTanX'
+  s.default_subspecs = 'IPDSDKModuleGDT', 'IPDSDKModuleCSJ', 'IPDSDKModuleKS', 'IPDSDKModuleMTG', 'IPDSDKModuleDSP','IPDSDKModuleSIG','IPDSDKModuleBD','IPDSDKModuleBeiZi','IPDSDKModuleTanX'
 
   s.subspec 'IPDAdSDK' do |ss|
     ss.vendored_frameworks = 'IPDSDK/IPDAdSDK/*.framework'
@@ -158,14 +158,14 @@ TODO: Add long description of the pod here.
     ss.dependency 'GDTMobSDK', '4.14.10'
     ss.dependency 'Ads-CN', '5.0.0.5'
  end
-  s.subspec 'ZJSDKModuleTanX' do |ss|
+  s.subspec 'IPDSDKModuleTanX' do |ss|
 
-   ss.vendored_libraries = 'ZJSDK/ZJSDKModuleTanX/*.a'
-   ss.dependency 'ZJSDK/ZJAdSDK'
-   ss.source_files         = 'ZJSDK/ZJSDKModuleTanX/*.h'
-   ss.vendored_frameworks  = 'ZJSDK/ZJSDKModuleTanX/*.framework'
-   ss.resource             = 'ZJSDK/ZJSDKModuleTanX/*.bundle'
-   ss.preserve_paths       = 'ZJSDK/ZJSDKModuleTanX/*.framework'
+   ss.vendored_libraries = 'IPDSDK/IPDSDKModuleTanX/*.a'
+   ss.dependency 'IPDSDK/IPDAdSDK'
+   ss.source_files         = 'IPDSDK/IPDSDKModuleTanX/*.h'
+   ss.vendored_frameworks  = 'IPDSDK/IPDSDKModuleTanX/*.framework'
+   ss.resource             = 'IPDSDK/IPDSDKModuleTanX/*.bundle'
+   ss.preserve_paths       = 'IPDSDK/IPDSDKModuleTanX/*.framework'
 
    # ss.dependency 'MintegralAdSDK/RewardVideoAd'
    # ss.dependency 'MintegralAdSDK/BannerAd'

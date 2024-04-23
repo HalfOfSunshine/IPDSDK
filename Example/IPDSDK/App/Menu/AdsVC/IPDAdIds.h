@@ -8,7 +8,7 @@
 
 #ifndef IPDAdIds_h
 #define IPDAdIds_h
-#define bAppid               @"Ibh2udfg4"
+#define Appid               @"Ibh2udfg4"
 
 #define AdId_None               @"请联系运营申请"
 

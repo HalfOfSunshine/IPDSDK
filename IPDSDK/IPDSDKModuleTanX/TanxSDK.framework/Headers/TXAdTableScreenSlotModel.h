@@ -21,4 +21,9 @@
  */
 @property (nonatomic, assign) BOOL needAutoCloseAD;
 
+/**
+ *  摇一摇功能是否关闭在退后台时，默认：NO
+ */
+@property (nonatomic, assign) BOOL needCloseShakeOnAppBackground;
+
 @end

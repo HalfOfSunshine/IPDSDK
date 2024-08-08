@@ -91,6 +91,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIView *superRenderView;
 
+/// 设置是否静音，默认为NO
+@property (nonatomic, assign, readwrite) BOOL mutedIfCan;
+
+/// 部分联盟设置了视频视图后需要重绘UI
+-(void)resizeIfNeed;
 @end
 
 NS_ASSUME_NONNULL_END

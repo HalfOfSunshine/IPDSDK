@@ -32,6 +32,8 @@ typedef NS_ENUM(NSInteger,IPDErrorCodeAd){
     IPDErrorCodeAd_MissParameter = 100601,
 
     IPDErrorCodeAd_AdInvalid = 100602,
+    
+    IPDErrorCodeAd_app_tradeId_verify_fail = 100701,//媒体激励校验未通过
 };
 
 
@@ -39,7 +41,8 @@ typedef NS_ENUM(NSInteger,IPDErrorCodeAd){
 
 
 + (NSError *)ipdAdError_errorWithCode:(IPDErrorCodeAd)code adItemConfig:(nullable IPDAdUnitModel *)adItemConfig userInfo:(nullable NSDictionary<NSString *, id> *)dict;
-
++ (NSError *)app_tradeId_verify_fail;
++ (NSError *)errorWithCode:(NSInteger)code message:(nullable NSString *)message;
 
 - (NSDictionary *)convertDictionary;
 

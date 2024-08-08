@@ -15,7 +15,7 @@ typedef NSString *IPDEventString NS_STRING_ENUM;
 FOUNDATION_EXPORT NSString * const IPDEvent_START;//开始调用
 FOUNDATION_EXPORT NSString * const IPDEvent_Load;//加载成功
 FOUNDATION_EXPORT NSString * const IPDEvent_Show;//展示成功
-FOUNDATION_EXPORT NSString * const IPDEvent_Finish;//完成
+FOUNDATION_EXPORT NSString * const IPDEvent_Finish;//触发激励
 FOUNDATION_EXPORT NSString * const IPDEvent_Click;//点击
 FOUNDATION_EXPORT NSString * const IPDEvent_Error;//错误
 FOUNDATION_EXPORT NSString * const IPDEvent_Other;//其他信息

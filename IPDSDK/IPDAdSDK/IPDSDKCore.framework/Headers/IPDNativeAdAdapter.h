@@ -2,11 +2,12 @@
 //  IPDNativeAdAdapter.h
 //  IPDSDKCore
 //
-//  Created by IpdCoder on 2021/3/29.
+//  Created by Rare on 2021/3/29.
 //
 
-#import "IPDCoreAdAdapter.h"
-#import "IPDNativeAdObject.h"
+//#import "IPDMultipleAdAdapter.h"
+#import <IPDSDKCore/IPDMultipleAdAdapter.h>
+#import <IPDSDKCore/IPDNativeAdObject.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @class IPDNativeAdAdapter;
@@ -14,26 +15,26 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  广告数据回调
 
- @param nativeAdObjects 广告数据数组
+ @param multipleResultObject 广告数据数组
  @param error 错误信息
  */
-- (void)ipdAdapter_nativeAd:(IPDNativeAdAdapter *)adAdapter didLoaded:(NSArray<IPDNativeAdObject *> * _Nullable)nativeAdObjects error:(NSError * _Nullable)error;
+- (void)ipdAdapter_nativeAd:(IPDNativeAdAdapter *)adAdapter didLoaded:(NSArray<IPDNativeAdObject *> * _Nullable)multipleResultObject error:(NSError * _Nullable)error;
 
 
 @end
 
 
 
-@interface IPDNativeAdAdapter : IPDCoreAdAdapter
+@interface IPDNativeAdAdapter : IPDMultipleAdAdapter
 
 @property (nonatomic,weak)id <IPDNativeAdAdapterDelegate> delegate;
 
-@property (nonatomic,strong,readonly)NSArray *nativeAdObjects;
+@property (nonatomic, strong) NSArray<IPDNativeAdObject *> *data;
 
 /**
  广告数据回调
  */
-- (void)nativeAdLoaded:(NSArray<IPDNativeAdObject *> * _Nullable)nativeAdObjects error:(NSError * _Nullable)error;
+- (void)nativeAdLoaded:(NSArray<IPDNativeAdObject *> * _Nullable)multipleResultObject error:(NSError * _Nullable)error;
 
 
 

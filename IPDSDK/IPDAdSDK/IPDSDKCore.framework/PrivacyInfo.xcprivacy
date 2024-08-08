@@ -6,7 +6,7 @@
 	<true/>
 	<key>NSPrivacyTrackingDomains</key>
 	<array>
-		<string>luckas.cn</string>
+		<string>hzshuyu.cn</string>
 		<string>8ziben.com</string>
 	</array>
 	<key>NSPrivacyAccessedAPITypes</key>
@@ -24,7 +24,6 @@
 			<string>NSPrivacyAccessedAPICategoryUserDefaults</string>
 			<key>NSPrivacyAccessedAPITypeReasons</key>
 			<array>
-				<string>C56</string>
 				<string>CA92.1</string>
 			</array>
 		</dict>

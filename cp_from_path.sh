@@ -1,4 +1,4 @@
-SOURCE_DIR="/Users/mamingkang/ZJSDK_workPace/IPDSDK-iOS"
+SOURCE_DIR="/Users/mamingkang/IPDSDK_workPace/IPDSDK-iOS"
 TARGET_DIR="$(pwd)/IPDSDK"
 # if [ -n $1 ]
 # then
@@ -22,9 +22,12 @@ then
     cp -r $SOURCE_DIR/IPDSDKModuleSIG/IPDSDKModuleSIG_Products/libIPDSDKModuleSIG.a                             IPDSDK/IPDSDKModuleSIG
     cp -r $SOURCE_DIR/IPDSDKModulePangle/IPDSDKModulePangle_Products/libIPDSDKModulePangle.a                    IPDSDK/IPDSDKModulePangle
     cp -r $SOURCE_DIR/IPDSDKModulePangle/IPDSDKModulePangle_Products/IPDSDKModulePangle/IPDSDKModulePangle.h    IPDSDK/IPDSDKModulePangle
-    cp -r $SOURCE_DIR/IPDSDKModuleYM/IPDSDKModuleYM_Products/libIPDSDKModuleYM.a                                IPDSDK/IPDSDKModuleYM
     cp -r $SOURCE_DIR/IPDSDKModuleBeiZi/IPDSDKModuleBeiZi_Products/libIPDSDKModuleBeiZi.a                       IPDSDK/IPDSDKModuleBeiZi
     cp -r $SOURCE_DIR/IPDSDKModuleWM/IPDSDKModuleWM_Products/libIPDSDKModuleWM.a                                IPDSDK/IPDSDKModuleWM
+    cp -r $SOURCE_DIR/IPDSDKModuleTanX/IPDSDKModuleTanX_Products/libIPDSDKModuleTanX.a                          IPDSDK/IPDSDKModuleTanX
+    cp -r $SOURCE_DIR/IPDSDKModuleTanX/IPDSDKModuleTanX_Products/IPDSDKModuleTanX/IPDSDKModuleTanX.h            IPDSDK/IPDSDKModuleTanX
+    cp -r -P $SOURCE_DIR/IPDSDKDemo/IPDSDKDemo/lib/SubModuleDependencys/TanX/*                                  IPDSDK/IPDSDKModuleTanX
+
 else
     echo "未检测到有效目标路径，请检查脚本所在目录下是否存在IPDSDK"
 fi

@@ -20,6 +20,9 @@
 /// 允许开屏在曝光后，发起预请求广告数据，默认YES
 @property (nonatomic, assign) BOOL autoPreLoadData;
 
+/// 摇一摇功能是否关闭在退后台时，默认：YES
+@property (nonatomic, assign) BOOL needCloseShakeOnAppBackground;
+
 /**----------------------------------- 模版UI配置 ------------------------------------**/
 /// 跳转按钮颜色
 @property (nonatomic, strong) UIColor *jumpTitleColor;

@@ -34,7 +34,7 @@ TODO: Add long description of the pod here.
 
   #依赖的系统静态库
   #z表示libz.tdb,后缀不需要,lib开头的省略lib
-  s.libraries = 'resolv.9','c++','z','sqlite3','bz2','xml2','c++abi'
+  s.libraries = 'resolv.9','c++','z','sqlite3','bz2','xml2','c++abi','sqlite3.0'
   s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64', 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386,arm64' }
   
 #  valid_archs = ['armv7', 'i386', 'x86_64', 'arm64']
@@ -42,7 +42,7 @@ TODO: Add long description of the pod here.
 #    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
 #  }
 #  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.default_subspecs = 'IPDSDKModuleGDT', 'IPDSDKModuleCSJ', 'IPDSDKModuleKS', 'IPDSDKModuleMTG', 'IPDSDKModuleDSP','IPDSDKModuleSIG','IPDSDKModuleBD','IPDSDKModuleBeiZi','IPDSDKModuleTanX'
+  s.default_subspecs = 'IPDSDKModuleGDT', 'IPDSDKModuleCSJ', 'IPDSDKModuleKS', 'IPDSDKModuleDSP','IPDSDKModuleSIG','IPDSDKModuleBD','IPDSDKModuleBeiZi','IPDSDKModuleTanX'
 
   s.subspec 'IPDAdSDK' do |ss|
     ss.vendored_frameworks = 'IPDSDK/IPDAdSDK/*.framework'
@@ -77,8 +77,8 @@ TODO: Add long description of the pod here.
     ss.vendored_libraries = 'IPDSDK/IPDSDKModuleKS/*.a'
     ss.dependency 'IPDSDK/IPDAdSDK'
 #    ss.vendored_frameworks = 'IPDSDK/IPDSDKModuleKS/KSAdSDK.framework'
-    ss.dependency 'KSAdSDK', '~> 3.3.6'
-#    bidding广告 3.3.6 以上，内容 3.3.10 以上 sdk 版本
+    ss.dependency 'KSAdSDK', '~> 3.3.61'
+#   3.3.61 以上注册方法与旧版本不一致，最低支持3.3.61，内容包版本号也为3.3.61
   end
 
   s.subspec 'IPDSDKModuleMTG' do |ss|
@@ -105,14 +105,6 @@ TODO: Add long description of the pod here.
     ss.dependency 'SigmobAd-iOS', '~> 4.7'
 #   sig更新日志要找运营看，或者自己注册一个账号看一下
   end
-#
-#  s.subspec 'IPDSDKModuleYM' do |ss|
-#    ss.vendored_libraries = 'IPDSDK/IPDSDKModuleYM/*.a'
-#    ss.dependency 'IPDSDK/IPDAdSDK'
-#    ss.vendored_frameworks = 'IPDSDK/IPDSDKModuleYM/*.framework'
-#    ss.preserve_paths = 'IPDSDK/IPDSDKModuleYM/*.framework'
-#    ss.resources = 'IPDSDK/IPDSDKModuleYM/AlicloudCloudCode.framework/AlicloudCloudCode.bundle'
-#  end
   
   s.subspec 'IPDSDKModuleGoogle' do |ss|
     ss.vendored_libraries = 'IPDSDK/IPDSDKModuleGoogle/*.a'
@@ -124,8 +116,8 @@ TODO: Add long description of the pod here.
  s.subspec 'IPDSDKModuleBD' do |ss|
    ss.vendored_libraries = 'IPDSDK/IPDSDKModuleBD/*.a'
    ss.dependency 'IPDSDK/IPDAdSDK'
-   ss.dependency 'BaiduMobAdSDK', '~> 5.32'
-#  bidding要求 IOS V4.81及以上版本
+   ss.dependency 'BaiduMobAdSDK', '~> 5.36'
+#  5.36 接口变更
  end
  
  s.subspec 'IPDSDKModulePangle' do |ss|

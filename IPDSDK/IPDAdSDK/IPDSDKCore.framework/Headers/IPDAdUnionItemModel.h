@@ -21,6 +21,7 @@ FOUNDATION_EXPORT NSString * const IPD_ADType_News;
 FOUNDATION_EXPORT NSString * const IPD_ADType_Feed;
 FOUNDATION_EXPORT NSString * const IPD_ADType_NativeAd;
 FOUNDATION_EXPORT NSString * const IPD_ADType_ContentPage;
+FOUNDATION_EXPORT NSString * const IPD_ADType_TubePage;
 FOUNDATION_EXPORT NSString * const IPD_ADType_FeedPage;
 FOUNDATION_EXPORT NSString * const IPD_ADType_HorizontalFeed;
 FOUNDATION_EXPORT NSString * const IPD_ADType_ImageTextPage;
@@ -95,6 +96,8 @@ typedef NS_ENUM(NSInteger,IPDAdShowPriority){
 @property (nonatomic, strong) NSString *error_strategy;
 /// 连续加载失败限制策略
 @property (nonatomic, strong) NSString *load_strategy;
+/// 连续不完成限制
+@property (nonatomic, strong) NSString *finish_strategy;
 
 @property (nonatomic, assign) IPDAdPlatformType platformType;
 
